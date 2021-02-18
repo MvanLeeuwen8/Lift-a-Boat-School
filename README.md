@@ -7,4 +7,4 @@
  Login information:\
  To log into the site, go to "/public/inloggen.php" (You can logout through "/public/uitloggen.php")\
  Login email: m.vanleeuwen@zuidwestsoftware.nl\
- Login password: _i^J1om-9u87
+ Login password: _7MCClcmFi#a
