@@ -6,5 +6,5 @@
  
  Login information:\
  To log into the site, go to "/public/inloggen.php" (You can logout through "/public/uitloggen.php")\
- Login username: zws_lab_test
+ Login username: zws_lab_test/
  Login password: _7MCClcmFi#a
