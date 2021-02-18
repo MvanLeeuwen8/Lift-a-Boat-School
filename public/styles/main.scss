@@ -1,0 +1,169 @@
+//region imports
+
+//variables
+@import "variables";
+
+// page parts
+@import "substyles/navigation";
+@import "substyles/footer";
+@import "substyles/sidebars";
+@import "substyles/forms";
+@import "substyles/modal";
+
+//main pages
+@import "substyles/over-ons";
+@import "substyles/contact";
+@import "substyles/bestemmingen";
+@import "substyles/inschrijvingen";
+@import "substyles/nieuws";
+@import "substyles/buitenland";
+@import "substyles/inloggen";
+@import "substyles/meer-info";
+
+//privacy and t&c
+@import "substyles/privacyverklaring";
+
+// deprecated pages
+@import "substyles/trips";
+@import "substyles/boten";
+@import "substyles/reviews";
+
+//endregion
+
+//region general
+  // general body
+html, body, .main-area, .main-no-footer, .nav-outside, .banner, #navbar, .footer-outside, #footer, .bottom-sidebar-mobile {
+  max-width: 100vw !important;
+}
+html, body, .main-area, .main-no-footer, .nav-outside, .banner, .footer-outside, #footer, .bottom-sidebar-mobile {
+  overflow-x: hidden;
+}
+
+a {
+  color: $darkblue;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+  body {
+    background: #fff;
+    margin:0;
+    background-size: cover;
+    font-family: "Segoe UI", sans-serif;
+    color: $darkGray;
+    overflow-y:auto;
+    overflow-x: hidden;
+    main {
+      width:58%;
+      display:inline-block;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      color: $darkblue;
+    }
+    a {
+      color:#fff;
+    }
+    p, li {
+      font-size: 13.5px;
+      text-align: justify;
+    }
+    figcaption {
+      font-size:13.5px;
+    }
+    #main {
+
+      button a {
+        color:#fff;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // inside body
+  .main-area {
+    margin:auto;
+    width:100%;
+    position:absolute;
+    min-height: 100vh;
+    .main-no-footer {
+      //min-height: 100vh;
+      //margin-bottom: 50px;
+    }
+  }
+
+  // content on page not including footer and nav
+  main {
+    background-color: $seethroughGray;
+  }
+
+  #main {
+    margin:60px auto;
+  }
+
+  // standard buttons and links
+  a, button {
+    text-decoration: none;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  button {
+    color: #fff;
+  }
+
+  a, button, input[type=submit], input[type=button] {
+    &:hover {
+      cursor:pointer;
+    }
+  }
+//endregion
+
+//region general - mobile
+  // Main-area to maximum width
+  @media only screen and (max-width:970px) {
+    .main-area {
+      width:100%;
+    }
+    main {
+      width:70%;
+    }
+  }
+
+  // main made wider
+  @media  only screen and (max-width:580px) {
+    main {
+      width:90%;
+    }
+  }
+//endregion
+
+//region error-pages and -messages
+  .error {
+    h1 {
+      font-size: 50px;
+    }
+
+    p a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .sentError {
+    display:none;
+  }
+
+  #SentSuccessful,
+  #SentError {
+    display:block;
+    text-align: center;
+  }
+//endregion

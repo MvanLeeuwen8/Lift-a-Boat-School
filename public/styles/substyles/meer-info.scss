@@ -1,0 +1,143 @@
+@import "../variables";
+
+.meer-info {
+
+  h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    width:50%;
+    display:inline-block;
+    color: $darkblue;
+  }
+
+  .inschrijf-btn {
+    float:right;
+  }
+
+  .departure-date {
+    margin-block-start: 3px;
+    margin-block-end: 2em;
+    font-size: 0.9em;
+  }
+
+  .destinations-sidebar .bestemming-single-sidebar {
+    width: 30%;
+    display: inline-block;
+    margin: 0 1.66666% 0 1.66666%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 149px;
+    }
+  }
+
+  .info-main-img {
+    width:49%;
+    display:inline-block;
+    margin-right:1%;
+
+    img {
+      width:100%;
+    }
+  }
+
+  .prices {
+    width: 49%;
+    display: inline-block;
+    float: right;
+
+    table {
+      width:100%;
+
+      th, td {
+        width: 50%;
+        text-align: left;
+        font-size: 14px;
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  .info-lang {
+    display:flex;
+    width:100%;
+  }
+
+  .gallery {
+    width:100%;
+
+    img {
+      width:30%;
+      display:inline-block;
+      margin:calc(10%/4);
+      cursor: pointer;
+      vertical-align: middle;
+
+    }
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .meer-info {
+    .info-main-img, .prices {
+      width:80%;
+      margin:auto;
+      display: block;
+      img {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width:550px) {
+  .meer-info .gallery img {
+
+    &:nth-child(3n+1) {
+      margin-left:0;
+    }
+
+    &:nth-child(3n) {
+      margin-right:0;
+    }
+  }
+}
+
+@media only screen and (min-width:400px) and (max-width:550px) {
+  .meer-info .gallery {
+    img {
+      width:46%;
+      margin-left:4%;
+      margin-right:4%;
+
+      &:nth-child(odd) {
+        margin-left:0;
+      }
+      &:nth-child(even) {
+        margin-right:0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .meer-info {
+    .info-main-img, .prices {
+      width:90%;
+    }
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .meer-info {
+    .info-main-img, .prices {
+      width:100%;
+    }
+    .gallery img {
+      width:90%;
+      display:block;
+      margin:30px auto;
+    }
+  }
+}

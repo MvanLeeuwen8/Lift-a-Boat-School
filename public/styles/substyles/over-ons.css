@@ -1,0 +1,25 @@
+main.home {
+  background-color: rgba(155, 155, 155, 0);
+  margin: 70px auto auto;
+}
+main.home p {
+  text-align: justify;
+}
+main.home p:first-child {
+  margin-top: 0;
+}
+main.home p:last-child {
+  margin-bottom: 0;
+}
+main.home p.home-intro {
+  font-weight: 600;
+}
+main.home a {
+  color: #1e6eb9;
+  text-decoration: none;
+}
+main.home a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=over-ons.css.map */

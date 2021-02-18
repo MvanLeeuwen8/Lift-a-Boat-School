@@ -1,0 +1,52 @@
+@import "../variables";
+
+//region privacyverklaring
+  .alg-vw, .privacy {
+    width: 80%;
+    margin: auto;
+    display:block;
+
+    a, h2 {
+      color:$darkblue;
+    }
+
+    .title-button {
+
+      h2, a {
+        width:50%;
+        display:inline-block;
+        margin-block-start: 20px;
+        margin-block-end: 20px;
+      }
+
+      a {
+        float:right;
+        text-align: right;
+
+        button {
+          height:34.4px;
+          border-radius:10px;
+          width:200px;
+        }
+      }
+    }
+  }
+//endregion
+
+//region privacyverklaring - mobile
+  @media only screen and (max-width:600px) {
+    .privacy .title-button {
+
+      h2, a {
+        width:100%;
+        float:left;
+        text-align: left;
+        margin: 10px 0 10px 0;
+      }
+
+      a {
+        margin: 10px 0 20px 0;
+      }
+    }
+  }
+//endregion

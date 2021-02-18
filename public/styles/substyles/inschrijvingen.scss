@@ -1,0 +1,539 @@
+@import "../variables";
+
+//region inschrijven
+  .inschrijven {
+
+    .form-business {
+      display:none;
+      .formblock-business {
+        width:48%;
+        margin-bottom:10px;
+        &:nth-child(odd) {
+          float:left;
+        }
+        &:nth-child(even) {
+          float:right;
+        }
+        input {
+          float:right;
+        }
+      }
+    }
+
+    h2 {
+      margin-block-start: 0;
+      font-size: 20px;
+      text-align: justify;
+      margin-block-end: 1em;
+      font-weight: bold;
+      color: #1e6eb9;
+    }
+
+    h3 {
+      margin-block-start: 0;
+    }
+    .form-intro-text a {
+      color: $darkblue;
+    }
+
+    .destinations-sidebar .bestemming-single-sidebar {
+      width: 45%;
+      display: inline-block;
+      margin: 0 2.5% 30px 2.5%;
+      text-align: center;
+      img {
+        object-fit: cover;
+        height: 300px;
+        width:300px;
+      }
+      h2 {
+        text-align: center;
+        margin-block-end: 0;
+      }
+      figcaption {
+        margin-bottom:15px;
+      }
+    }
+
+    //region application-form
+    form {
+      // "about the owner" - part of the form
+      .form-about {
+        width: 100%;
+        margin-bottom: 10px;
+        overflow: auto;
+        padding-top: 10px;
+        padding-right: 5px;
+        div {
+          width:48%;
+          display:inline-block;
+          margin-bottom:10px;
+          &:nth-child(even) {
+            float:left;
+            input {
+              float:right;
+              width: 38%;
+            }
+          }
+          &:nth-child(odd) {
+            float:right;
+            input {
+              float:right;
+              width: 38%;
+            }
+          }
+        }
+      }
+
+      .form-business .formblock-business {
+        input {
+          width:38%;
+        }
+      }
+
+      .form-business {
+        margin-top:20px;
+      }
+
+      // "business" - part of the form
+
+
+      // "about the ship" - part of the form
+      .form-ship {
+        width: 100%;
+        margin-bottom: 20px;
+        overflow: auto;
+        padding-top: 10px;
+        padding-right: 5px;
+        .basic-ship-info, .detailed-ship-info {
+          width:100%;
+          display:inline-block;
+          margin-bottom:10px;
+          .formblock-ship {
+            width:48%;
+            margin-bottom:10px;
+            &:nth-child(odd) {
+              float:left;
+              input, select {
+                float:right;
+                width: 38%;
+              }
+            }
+            &:nth-child(even) {
+              float:right;
+              input, select {
+                float:right;
+                width: 38%;
+              }
+            }
+          }
+          &:nth-child(odd) {
+            float:right;
+            input, select {
+              float:right;
+              width: 38%;
+            }
+          }
+          &:nth-child(even) {
+            float:left;
+            input, select {
+              float:right;
+              width: 38%;
+            }
+          }
+        }
+        .afmetingen-schip {
+          .form-half-width {
+            margin-bottom:15px;
+            .inputs {
+              input {
+                width:50px;
+                float:unset;
+                margin-bottom:5px;
+              }
+            }
+            &:nth-child(even) {
+            float:left;
+          }
+            &:nth-child(odd) {
+              float:right;
+            }
+          }
+          .boven-water-schip {
+            margin-bottom:30px;
+          }
+        }
+        .detailed-ship-info {
+          .form-half-width {
+            .inputs {
+              text-align: right;
+              display: block;
+              width: 144px;
+              float: right;
+              input {
+                width:50px;
+                float:unset;
+                margin-bottom: 5px;
+                margin-right: 4px;
+                &:last-child {
+                  margin-right:0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // "other questions" - part of the form
+      .form-remarks {
+        label {
+          display:block;
+          margin-bottom:10px;
+        }
+        textarea {
+          width: 100%;
+          resize: vertical;
+          margin-bottom:20px;
+        }
+      }
+
+      // "date" - part of the form
+      .form-date {
+        label {
+          display:block;
+          margin-bottom:10px;
+        }
+        input {
+          margin-bottom:20px;
+        }
+      }
+
+      .form-ship .afmetingen-schip {
+        width:100%;
+        display:block;
+        .form-half-width {
+          width:48%;
+          text-align: left;
+          label {
+            float: left;
+            display: inline-block;
+            width: auto;
+            text-align: left;
+          }
+          input {
+            float:unset;
+            margin-right: 4px;
+            width:100px;
+          }
+          .inputs {
+            text-align: right;
+            display: block;
+            width:144px;
+            float:right;
+            input:last-child {
+              margin-right:0;
+            }
+            span {
+              width:auto;
+              display:inline-block;
+              text-align: left;
+            }
+          }
+          &:nth-child(even) {
+            float:left;
+            margin-left:0;
+          }
+          &:nth-child(odd) {
+            float:right;
+            margin-right:0;
+          }
+        }
+      }
+
+    }
+    //endregion
+
+    .captcha-img {
+      margin-top:15px;
+      margin-bottom:10px;
+      svg {
+        vertical-align: top;
+        height: calc(100% - (1.5em / 2));
+        margin-left: 10px;
+        color: #1e6eb9;
+        width: 1.5em;
+        margin-top: Calc((50px - 24px) / 2);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .kvk-business {
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+    }
+}
+//endregion
+
+//region inschrijven - mobile
+
+  @media only screen and (max-width:1500px) {
+    .inschrijven form .form-ship .formblock-ship:nth-child(even) {
+      input, select {
+        width:30%;
+      }
+    }
+  }
+
+  @media only screen and (max-width:1420px) {
+    .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width {
+      width:66%;
+      float:left;
+      .inputs {
+        width:220px;
+        input {
+          width:80px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width:1300px) {
+    .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width {
+      width:75%;
+    }
+      .inschrijven form {
+      .form-about, .form-ship {
+        .formblock-about, .formblock-ship {
+          input, select {
+            &:nth-child(even) {
+              width:38%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width:1150px) {
+    .inschrijven .destinations-sidebar .bestemming-single-sidebar img {
+      width:250px;
+      height:250px;
+    }
+  }
+
+  @media only screen and (max-width:1100px) {
+    .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width {
+      width:85%;
+    }
+    .inschrijven form {
+      .formblock-about {
+        width:100%;
+      }
+    }
+  }
+
+  @media only screen and (max-width:1010px) {
+    main.inschrijven {
+      width: 72%;
+    }
+    .inschrijven .destinations-sidebar .bestemming-single-sidebar img {
+      width:300px;
+      height:300px;
+    }
+  }
+
+  @media only screen and (max-width:910px) {
+    .inschrijven .destinations-sidebar .bestemming-single-sidebar img {
+      width:250px;
+      height:250px;
+    }
+  }
+
+  @media only screen and (max-width:800px) {
+    .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width {
+      width:100%;
+    }
+    .inschrijven .destinations-sidebar .bestemming-single-sidebar img {
+      width:230px;
+      height:230px;
+    }
+  }
+
+  @media only screen and (max-width:750px) {
+    main.inschrijven {
+      width: 90%;
+      margin: auto;
+      display: block;
+      .destinations-sidebar {
+        display:none;
+      }
+      .formblock-submit {
+        margin-bottom: 30px;
+      }
+    }
+    .inschrijven-bottom-sidebar .bestemming-single-sidebar {
+      text-align: center;
+      width:45%;
+      margin-bottom:30px;
+      .destination-sidebar-img {
+        height:250px;
+        width:250px;
+      }
+      .destination-sidebar-date {
+        margin-bottom:15px;
+      }
+    }
+  }
+
+  @media only screen and (max-width:600px) {
+    .inschrijven form .form-ship .detailed-ship-info .formblock-ship {
+      width:100%;
+    }
+  }
+
+  @media only screen and (max-width:550px) {
+    .inschrijven form .form-ship .basic-ship-info .formblock-ship {
+      width:100%;
+    }
+    .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs {
+      width:190px;
+    }
+    main.inschrijven form {
+      .form-intro-text, .form-about, .form-ship, .form-remarks, .form-date, .formblock-submit, .form-business .formblock-business {
+        width: 100%;
+        margin-left:0;
+        margin-right:0;
+        .formblock-about, .formblock-ship {
+          width:100%;
+          margin-left:0;
+          margin-right:0;
+        }
+      }
+
+    }
+    .inschrijven-bottom-sidebar .bestemming-single-sidebar  .destination-sidebar-img {
+      width:220px;
+      height:220px;
+    }
+  }
+
+  // Form-width made larger
+  @media only screen and (max-width:500px) {
+    .inschrijven {
+      width:90%;
+      #inschrijfform {
+        padding: 30px 0;
+      }
+    }
+    .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs {
+      width:140px;
+      input {
+        width:60px;
+      }
+    }
+
+    .inschrijven-bottom-sidebar .bestemming-single-sidebar  .destination-sidebar-img {
+      width:200px;
+      height:200px;
+    }
+  }
+
+  @media only screen and (max-width:480px) {
+    main.inschrijven {
+      width:100%;
+      h3 {
+        margin-left:10px;
+      }
+    }
+  }
+
+  /*
+  Form-block: destination, date, departure-place: made the input bigger
+  Form-block: about owner & the boat: put the inputs on their own line
+   */
+  @media only screen and (max-width:440px) {
+    .zakelijk-particulier {
+      text-align: center;
+    }
+    .inschrijven#main form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs,
+    .inschrijven#main form .form-ship .detailed-ship-info .formblock-ship.form-half-width .inputs {
+      width:100%;
+      display: inline;
+      text-align: center;
+      input {
+        width:100px;
+        display:inline-block;
+        &:first-child {
+          margin-right:2px;
+        }
+      }
+    }
+      .inschrijven #inschrijfform {
+      padding-top:0;
+      padding-bottom:0;
+
+      h4, h5 {
+        text-align: center;
+      }
+    }
+    .inschrijven#main {
+      .form-about, .form-ship, .form-remarks {
+        .formblock-about, .formblock-ship {
+          label, input, select {
+            float:unset;
+            text-align:center;
+            display:block;
+            margin:auto;
+          }
+          label {
+            width:100%;
+            margin-bottom:3px;
+          }
+          input,select {
+            width:60%;
+          }
+        }
+      }
+    }
+    .inschrijven-bottom-sidebar .bestemming-single-sidebar  {
+      width:90%;
+      .destination-sidebar-img {
+        width:250px;
+        height:250px;
+      }
+    }
+
+    .inschrijven form .form-business .formblock-business {
+      label {
+        width: 100%;
+        margin-bottom: 3px;
+        display: block;
+        text-align: center;
+      }
+      input {
+        width:60%;
+        float: unset;
+        text-align: center;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+
+  @media only screen and (max-width:300px) {
+    .inschrijven-bottom-sidebar .bestemming-single-sidebar .destination-sidebar-img {
+      width:220px;
+      height:220px;
+    }
+  }
+//endregion

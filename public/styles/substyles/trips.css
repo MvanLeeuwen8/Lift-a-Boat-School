@@ -1,0 +1,35 @@
+.trips .popup-form .formblock-wide {
+  width: 48%;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.trips .popup-form .formblock-wide:nth-child(1) {
+  float: right;
+}
+.trips .popup-form .formblock-wide.block-destination, .trips .popup-form .formblock-wide.block-price {
+  margin-left: 2%;
+}
+.trips .popup-form .formblock-wide label {
+  min-width: 40%;
+  display: inline-block;
+}
+.trips .popup-form .formblock-wide input[type=text], .trips .popup-form .formblock-wide input[type=date], .trips .popup-form .formblock-wide input[type=number] {
+  min-width: 50%;
+  float: right;
+}
+.trips .popup-form .formblock-wide input[type=date] {
+  padding-left: 4px;
+}
+.trips .popup-form .formblock-textarea {
+  width: 98.5%;
+}
+.trips .popup-form .formblock-textarea label {
+  vertical-align: top;
+  min-width: 22.5%;
+  display: inline-block;
+}
+.trips .popup-form .formblock-textarea textarea {
+  width: 75.7%;
+}
+
+/*# sourceMappingURL=trips.css.map */

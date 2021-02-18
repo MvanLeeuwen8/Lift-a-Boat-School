@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+DirectoryIndex /Lift-a-Boat/public/index.php
+
+# Error redirects
+ErrorDocument 401 /Lift-a-Boat/public/errors/401.php
+ErrorDocument 404 /Lift-a-Boat/public/errors/404.php
+Errordocument 500 /Lift-a-Boat/public/errors/500.php
+ErrorDocument 502 /Lift-a-Boat/public/errors/502.php

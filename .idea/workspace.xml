@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7e423dd2-4fe5-4b11-b400-7490966e8d5e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="5e8de3ac-132b-486e-8b87-5a2e5ba79c18" value="094141" />
+    </colors>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1iSLNSkUU2IlMwt1JMVDJhAaCGJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last.edited.regexp" value="Sample Text" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\liftaboat-new\public\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\liftaboat-new\public\" />
+      <recent name="C:\xampp\htdocs\liftaboat-new\public\js" />
+      <recent name="C:\xampp\htdocs\liftaboat-new\public\includes" />
+      <recent name="C:\xampp\htdocs\liftaboat-new\public\styles\substyles" />
+      <recent name="C:\xampp\htdocs\liftaboat-new\public\includes\delete_update" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.config.php">
+    <configuration name="config.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/main.scss/public/includes/config.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="updateDestination.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/main.scss/public/includes/updateDestination.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="database_inschrijven.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/public/includes/database_connections/database_inschrijven.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.config.php" />
+        <item itemvalue="JavaScript Debug.updateDestination.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e423dd2-4fe5-4b11-b400-7490966e8d5e" name="Default Changelist" comment="" />
+      <created>1601896006464</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601896006464</updated>
+      <workItem from="1601896007983" duration="653000" />
+      <workItem from="1601896676483" duration="11311000" />
+      <workItem from="1601968617880" duration="24724000" />
+      <workItem from="1602001073465" duration="174000" />
+      <workItem from="1602146682434" duration="6294000" />
+      <workItem from="1602157444237" duration="11068000" />
+      <workItem from="1602505532657" duration="4000" />
+      <workItem from="1602505552337" duration="9314000" />
+      <workItem from="1602573545755" duration="24781000" />
+      <workItem from="1602746622183" duration="458000" />
+      <workItem from="1602753146837" duration="15462000" />
+      <workItem from="1603091296774" duration="25504000" />
+      <workItem from="1603177773664" duration="25859000" />
+      <workItem from="1603352078836" duration="24048000" />
+      <workItem from="1603699439518" duration="21202000" />
+      <workItem from="1603785571980" duration="2041000" />
+      <workItem from="1603790434455" duration="7045000" />
+      <workItem from="1603959332106" duration="12324000" />
+      <workItem from="1603975437291" duration="3295000" />
+      <workItem from="1603978815127" duration="6609000" />
+      <workItem from="1604304697794" duration="24966000" />
+      <workItem from="1604390722386" duration="26417000" />
+      <workItem from="1604563323396" duration="20662000" />
+      <workItem from="1604995609575" duration="20492000" />
+      <workItem from="1605169130790" duration="23359000" />
+      <workItem from="1605513641545" duration="26742000" />
+      <workItem from="1605600043886" duration="22605000" />
+      <workItem from="1605772818872" duration="22998000" />
+      <workItem from="1606723659616" duration="555000" />
+      <workItem from="1606724281360" duration="25420000" />
+      <workItem from="1606809657823" duration="24489000" />
+      <workItem from="1606984353197" duration="23422000" />
+      <workItem from="1607328554532" duration="72000" />
+      <workItem from="1607328709013" duration="22694000" />
+      <workItem from="1607414560158" duration="24761000" />
+      <workItem from="1607588717087" duration="24179000" />
+      <workItem from="1607934874139" duration="23861000" />
+      <workItem from="1608193054283" duration="24149000" />
+      <workItem from="1608538190860" duration="24251000" />
+      <workItem from="1608624635767" duration="20950000" />
+      <workItem from="1608797143124" duration="20878000" />
+      <workItem from="1609230654422" duration="14487000" />
+      <workItem from="1609833954491" duration="23000" />
+      <workItem from="1609834037521" duration="22253000" />
+      <workItem from="1610007847754" duration="20365000" />
+      <workItem from="1610038834972" duration="429000" />
+      <workItem from="1610613003555" duration="526000" />
+      <workItem from="1610613545272" duration="5330000" />
+      <workItem from="1610629610300" duration="664000" />
+      <workItem from="1611562982796" duration="9862000" />
+      <workItem from="1611839228585" duration="45000" />
+      <workItem from="1612186602258" duration="1555000" />
+      <workItem from="1612188269945" duration="2240000" />
+      <workItem from="1612258233488" duration="3881000" />
+      <workItem from="1613404399031" duration="1589000" />
+      <workItem from="1613482309096" duration="6306000" />
+      <workItem from="1613639349189" duration="967000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/public/includes/create_pdf.php</url>
+          <line>210</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

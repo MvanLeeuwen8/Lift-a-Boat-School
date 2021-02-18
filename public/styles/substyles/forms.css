@@ -1,0 +1,154 @@
+input, select, textarea {
+  border: 1px solid rgba(21, 21, 23, 0.95);
+  border-radius: 3px;
+  font-family: "Segoe UI", sans-serif;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type=file] {
+  border: none;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=date]:focus, input[type=number]:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00a0dc;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.popup-form #popupForm, #updateForm {
+  display: none;
+}
+
+input[type=submit], input[type=button], .form-button, .update-delete-button, button {
+  border-radius: 8px;
+  background-color: rgba(21, 21, 23, 0.95);
+  border: 1px solid rgba(21, 21, 23, 0.95);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #fff;
+  width: max-content;
+}
+input[type=submit]:hover, input[type=button]:hover, .form-button:hover, .update-delete-button:hover, button:hover {
+  text-decoration: underline;
+}
+input[type=submit]:focus, input[type=button]:focus, .form-button:focus, .update-delete-button:focus, button:focus {
+  outline: none;
+}
+
+.edit-form {
+  width: 70%;
+  padding: 20px;
+  margin: 30px auto auto auto;
+}
+.edit-form .tox {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.edit-form label {
+  min-width: 30%;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+}
+.edit-form p, .edit-form span {
+  margin-left: 20px;
+  margin-block-start: 0;
+}
+.edit-form input[type=text], .edit-form textarea {
+  min-width: 60%;
+}
+.edit-form textarea {
+  resize: vertical;
+}
+.edit-form .imagebutton {
+  width: 30%;
+  display: inline-block;
+  margin-left: calc(10%/4);
+  margin-right: calc(10%/4);
+}
+.edit-form .imagebutton:nth-child(3n+1) {
+  margin-left: 0;
+}
+.edit-form .imagebutton:nth-child(3n) {
+  margin-right: 0;
+}
+.edit-form .imagebutton img {
+  max-width: 100%;
+}
+.edit-form .imagebutton label {
+  margin-left: 0;
+}
+.edit-form .imagebutton input {
+  display: block;
+  margin: auto;
+}
+.edit-form .imagebutton input[type=button] {
+  margin-bottom: 10px;
+}
+.edit-form .imagebutton input[type=checkbox] {
+  margin-bottom: 30px;
+}
+.edit-form .imagebutton textarea {
+  width: 100%;
+}
+.edit-form .edit-price-left, .edit-form .edit-price-right {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+.edit-form .edit-price-left input::-webkit-outer-spin-button,
+.edit-form .edit-price-left input::-webkit-inner-spin-button, .edit-form .edit-price-right input::-webkit-outer-spin-button,
+.edit-form .edit-price-right input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.edit-form .edit-price-left input[type=number], .edit-form .edit-price-right input[type=number] {
+  -moz-appearance: textfield;
+}
+.edit-form .edit-destination-description label {
+  vertical-align: top;
+}
+.edit-form .edit-destination-description textarea {
+  resize: vertical;
+}
+.edit-form .edit-buttons input[type=submit] {
+  margin-right: 10px;
+}
+.edit-form .edit-destination-img {
+  border-top: 2px solid rgba(21, 21, 23, 0.95);
+  padding-top: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .edit-destination-form {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .edit-destination-form div label, .edit-destination-form div input[type=text], .edit-destination-form div input[type=file], .edit-destination-form div textarea {
+    display: block;
+    margin-left: 20px;
+    width: 80%;
+  }
+  .edit-destination-form div label {
+    margin-bottom: 5px;
+  }
+  .edit-destination-form img, .edit-destination-form input[type=submit] {
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .edit-destination-form div input[type=text], .edit-destination-form div textarea {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .edit-destination-form img {
+    width: 250px !important;
+  }
+}
+
+/*# sourceMappingURL=forms.css.map */

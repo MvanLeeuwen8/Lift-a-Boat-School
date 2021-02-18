@@ -1,0 +1,62 @@
+main.boten .popup-form #boatForm {
+  display: none;
+}
+
+.boten form {
+  padding: 30px;
+  width: 90%;
+}
+.boten form .formblock-wide {
+  display: flex;
+  margin-bottom: 10px;
+  width: 70%;
+}
+.boten form .formblock-wide label {
+  width: 36.8%;
+}
+.boten form .formblock-wide input {
+  border-radius: 3px;
+  width: 50%;
+  float: right;
+}
+.boten form .formblock-medium .form-half-md {
+  display: inline-block;
+  width: 50%;
+}
+.boten form .formblock-medium .form-half-md:last-child {
+  float: right;
+}
+.boten form .formblock-medium .form-half-md:last-child label {
+  margin-left: 2%;
+}
+.boten form .formblock-medium .form-half-md:first-child input {
+  margin-right: 2%;
+}
+.boten form .formblock-medium .form-half-md .half-md-section {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.boten form .formblock-medium .form-half-md .half-md-section label, .boten form .formblock-medium .form-half-md .half-md-section input {
+  display: inline-block;
+}
+.boten form .formblock-medium .form-half-md .half-md-section label {
+  width: 50%;
+}
+.boten form .formblock-medium .form-half-md .half-md-section input {
+  width: 44%;
+  float: right;
+}
+.boten form .formblock-submit input[type=submit] {
+  float: left;
+}
+.boten form .formblock-submit input[type=button] {
+  float: right;
+}
+
+.boat-table {
+  width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=boten.css.map */

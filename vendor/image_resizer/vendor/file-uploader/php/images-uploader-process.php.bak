@@ -1,0 +1,16 @@
+<?php
+	foreach($_FILES as $file) {
+        echo "fffff";
+        die();
+        echo $_GET['overwrite'];
+        if ($_GET['overwrite'] == true) {
+            move_uploaded_file($file['tmp_name'], "../../../upload/" . $file['name']); 
+        } else {
+            if (file_exists("../../../upload/" . $file['name'])) {
+                echo "3"
+            } else {
+                move_uploaded_file($file['tmp_name'], "../../../upload/" . $file['name']);
+            }
+        }
+	}	
+?>

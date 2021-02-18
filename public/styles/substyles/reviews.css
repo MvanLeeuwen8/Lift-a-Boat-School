@@ -1,0 +1,114 @@
+.reviews .popup-form #popupForm .reviewForm-section {
+  margin-bottom: 10px;
+}
+.reviews .popup-form #popupForm .reviewForm-section div input {
+  width: 50%;
+  float: right;
+  margin-right: 2%;
+}
+.reviews .popup-form #popupForm .reviewForm-section .commentaarlabel {
+  display: block;
+  margin-bottom: 10px;
+}
+.reviews .popup-form #popupForm .reviewForm-section textarea {
+  min-width: 70%;
+}
+.reviews .popup-form #popupForm .reviewForm-section .review-naam, .reviews .popup-form #popupForm .reviewForm-section .review-rating {
+  width: 50%;
+  display: inline-block;
+}
+.reviews .popup-form #popupForm .reviewForm-section .review-naam:last-child, .reviews .popup-form #popupForm .reviewForm-section .review-rating:last-child {
+  float: right;
+}
+.reviews .popup-form #popupForm .reviewForm-section .review-rating label {
+  margin-left: 2%;
+}
+.reviews .popup-form #popupForm .reviewForm-section .review-rating select {
+  width: 100px;
+  font-size: 1.05em;
+}
+
+.review-table {
+  width: 100%;
+}
+.review-table tr {
+  font-style: italic;
+  width: 70%;
+  display: inline-block;
+  margin: 10px auto;
+  padding: 8px;
+  border: 3px solid #00a0dc;
+  border-radius: 8px;
+}
+.review-table tr td {
+  text-align: justify;
+}
+.review-table tr td button {
+  margin-top: 10px;
+}
+.review-table .review-comment {
+  font-style: normal;
+}
+.review-table a {
+  text-align: center;
+}
+
+@-moz-document url-prefix() {
+  .reviews .old-reviews .review-table .review-single .review-comment {
+    margin-bottom: 0 !important;
+  }
+}
+@media only screen and (max-width: 1380px) {
+  .review-table .review-single {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .review-table .review-single {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .review-table .review-single {
+    width: 100%;
+  }
+
+  .reviews .popup-form #popupForm .reviewForm-section textarea {
+    min-width: 80%;
+  }
+}
+@media only screen and (max-width: 580px) {
+  main.reviews {
+    width: 90%;
+    margin-left: 5px;
+  }
+  main.reviews .popup-form {
+    margin-left: 20px;
+  }
+  main.reviews .popup-form #popupForm .reviewForm-section textarea {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .reviews .popup-form #popupForm .reviewForm-section .review-naam, .reviews .popup-form #popupForm .reviewForm-section .review-rating {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .reviews .popup-form #popupForm .reviewForm-section .review-naam label, .reviews .popup-form #popupForm .reviewForm-section .review-rating label {
+    margin-left: 0;
+  }
+  .reviews .popup-form #popupForm .reviewForm-section .review-naam input, .reviews .popup-form #popupForm .reviewForm-section .review-rating input {
+    margin-right: 0;
+  }
+  .reviews .popup-form #popupForm .reviewForm-section .review-naam select, .reviews .popup-form #popupForm .reviewForm-section .review-rating select {
+    float: right;
+  }
+}
+@media only screen and (max-width: 350px) {
+  main.reviews {
+    margin-left: 2px;
+  }
+}
+
+/*# sourceMappingURL=reviews.css.map */

@@ -1,0 +1,189 @@
+@import "../variables";
+
+//region contact
+  .contact {
+    a {
+      color:$lightblue;
+    }
+
+    //region contact form
+      #contactForm {
+        margin: auto;
+        .contact-intro {
+          width:80%;
+          margin:0 auto 20px auto;
+        }
+        label {
+          width:20%;
+          display:inline-block;
+          margin-left:10%;
+          float:left;
+          font-size:1.5em;
+        }
+        input, textarea {
+          width:40%;
+          display:inline-block;
+          margin-bottom: 30px;
+        }
+        input[type=submit] {
+          margin-left:38%;
+          width:25%;
+          margin-bottom:70px;
+        }
+        input[type=email], input[type=text] {
+          height: 2.5em;
+        }
+        textarea {
+          resize:vertical;
+          margin-top:3px;
+        }
+        .contact-captcha {
+          input {
+            margin-bottom:10px;
+          }
+        }
+        .captcha-img {
+          margin-left:Calc(50% - 200px / 2);
+          height:60px;
+          svg {
+            vertical-align: top;
+            height: Calc(100% - (1.5em / 2));
+            margin-left: 10px;
+            color: $darkblue;
+            width: 1.5em;
+            &:hover {
+              cursor:pointer;
+            }
+          }
+        }
+      }
+    //endregion
+
+    //region links and social media beneath contact form
+      //links
+      .contactlinks {
+        border-top: 2px solid $lightblue;
+        padding-top: 30px;
+        width:80%;
+        margin:auto;
+        text-align: center;
+        a {
+          display: inline-block;
+          margin: auto 10px;
+          &.tel {
+            float: left;
+          }
+          &.mail {
+            float: none;
+            text-align: center;
+          }
+        }
+
+        // social media
+        .socialmedia {
+          width: 15%;
+          float:right;
+          text-align: right;
+          a {
+            transition: 0.3s;
+            &:hover {
+              transform: scale(1.5);
+            }
+          }
+        }
+      }
+    //endregion
+  }
+//endregion
+
+//region contact - mobile
+  @media only screen and (max-width:1010px) {
+    main.contact {
+      width:72%;
+    }
+  }
+
+  @media only screen and (max-width:970px) {
+    main.contact #contactForm {
+      padding-top:0;
+    }
+  }
+
+  @media only screen and (max-width:890px) {
+    main.contact {
+      #contactForm input[type=submit] {
+        margin-bottom: 30px;
+      }
+      // links beneath form
+      .contactlinks {
+        a {
+          display: block;
+          float: unset
+        }
+
+        .tel, &.mail {
+          width: 100%;
+        }
+
+        .socialmedia {
+          width:100%;
+          float:unset;
+          text-align: center;
+          a {
+            display:inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width:770px) {
+    main.contact  {
+      #contactForm {
+        padding:20px 0 10px 0;
+        label {
+          display: block;
+          width: 100%;
+          text-align: center;
+          float: none;
+          margin-left: 0;
+          margin-bottom:5px;
+        }
+        input,
+        textarea {
+          width: 60%;
+          margin: auto auto 20px auto !important;
+          display: block;
+        }
+        input[type=submit] {
+          display:block;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width:750px) {
+    .contact#main {
+      margin: auto;
+      display: block;
+      width:80%;
+    }
+  }
+
+  @media only screen and (max-width:600px) {
+    .contact#main {
+      width:90%;
+      #contactForm {
+        input[type=email], textarea {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width:400px) {
+    main.contact #contactForm input[type=submit] {
+      width:40%;
+    }
+  }
+//endregion

@@ -1,0 +1,99 @@
+main.contact a:hover {
+  text-decoration: underline;
+}
+main.contact #contactForm {
+  padding: 70px 0;
+}
+main.contact #contactForm .contact-intro {
+  width: 80%;
+  margin: 0 auto 20px auto;
+}
+main.contact #contactForm label {
+  width: 20%;
+  display: inline-block;
+  margin-left: 10%;
+  float: left;
+  font-size: 1.5em;
+}
+main.contact #contactForm input, main.contact #contactForm textarea {
+  width: 40%;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+main.contact #contactForm input[type=submit] {
+  margin-left: 38%;
+  width: 25%;
+  margin-bottom: 70px;
+}
+main.contact .contactlinks {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+main.contact .contactlinks a {
+  display: inline-block;
+  margin: auto 10px;
+}
+main.contact .contactlinks a.tel {
+  float: left;
+}
+main.contact .contactlinks a.mail {
+  float: none;
+  text-align: center;
+}
+main.contact .contactlinks .socialmedia {
+  width: 20%;
+  float: right;
+  text-align: right;
+}
+main.contact .contactlinks .socialmedia a {
+  transition: 0.3s;
+}
+main.contact .contactlinks .socialmedia a:hover {
+  transform: scale(1.5);
+}
+
+@media only screen and (max-width: 890px) {
+  main.contact #contactForm input[type=submit] {
+    margin-bottom: 30px;
+  }
+  main.contact .contactlinks a {
+    display: block;
+    float: unset;
+  }
+  main.contact .contactlinks .tel, main.contact .contactlinks.mail {
+    width: 100%;
+  }
+  main.contact .contactlinks .socialmedia {
+    width: 100%;
+    float: unset;
+    text-align: center;
+  }
+  main.contact .contactlinks .socialmedia a {
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 770px) {
+  main.contact #contactForm {
+    padding: 20px 0 10px 0;
+  }
+  main.contact #contactForm label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  main.contact #contactForm input,
+main.contact #contactForm textarea {
+    width: 60%;
+    margin: auto auto 20px auto !important;
+    display: block;
+  }
+  main.contact #contactForm input[type=submit] {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

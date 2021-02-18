@@ -1,0 +1,284 @@
+@import "../variables";
+
+//region forms
+  // default input, select and textarea options
+  input, select, textarea {
+    border: $borderDark;
+    border-radius: $borderRadiusInput;
+    font-family: "Segoe UI", sans-serif;
+
+    //border-box to make them all behave the same, for all browsers
+    -ms-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+
+  // no border for uploads
+  input[type=file] {
+    border:none;
+  }
+
+  // outline for other inputs when selected
+  input[type=text], input[type=email], input[type=tel], input[type=date], input[type=number], textarea, select {
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px $lightblue;
+      border-color: rgba(0,0,0,0);
+    }
+  }
+
+  // don't display popup- & update-forms before button click
+  .popup-form #popupForm, #updateForm {
+    display:none;
+  }
+
+  // form-buttons
+  input[type=submit], input[type=button], .form-button, .update-delete-button, button {
+    border-radius: $borderRadiusButton;
+    background-color: $darkblue;
+    border: 1px solid $darkblue;
+    padding-top:3px;
+    padding-bottom:3px;
+    color: #fff;
+    width:max-content;
+
+    // added hover for buttons
+    &:hover {
+      text-decoration: underline;
+    }
+
+    // no outline on buttons
+    &:focus {
+      outline:none;
+    }
+  }
+//endregion
+
+  .upload-btn {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: rgb(240, 240, 240);
+    padding: 2px 7px;
+    border: 1px solid $darkGray;
+    color: black;
+    text-decoration: none;
+    font-size: Calc(40px / 3);
+    font-family: sans-serif;
+    vertical-align: middle !important;
+    min-width:auto !important;
+    width:auto !important;
+    &:hover {
+      background-color: rgb(207, 207, 207);
+      cursor: pointer;
+    }
+  }
+
+//region edit-forms
+  .edit-form {
+    width:70%;
+    padding:20px;
+    margin: 30px auto auto auto;
+    .tox {
+      margin-left:20px;
+      margin-top:20px;
+    }
+    label {
+      min-width:30%;
+      display:inline-block;
+      margin-left:20px;
+      vertical-align: top;
+    }
+    p, span {
+      margin-left:20px;
+      margin-block-start: 0;
+    }
+    input[type=text], textarea {
+      min-width:60%;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .imagebutton {
+      display: inline-block;
+      margin-left:Calc(10%/4);
+      margin-right:Calc(10%/4);
+      &:nth-child(3n+1) {
+        margin-left:0;
+      }
+      &:nth-child(3n) {
+        margin-right:0;
+      }
+      img {
+        max-width: 100%;
+        max-height: 250px;
+        margin: auto;
+        display: block;
+      }
+      label {
+        margin-left:0;
+        margin-bottom: -30px;
+      }
+      input {
+        display:block;
+        margin:auto;
+      }
+      input[type=button] {
+        margin-bottom:10px;
+      }
+      input[type=checkbox] {
+        margin-bottom:30px;
+      }
+      textarea {
+        width:100%;
+      }
+
+    }
+    .edit-price-left, .edit-price-right {
+      width:50%;
+      display:inline-block;
+      vertical-align: top;
+
+      //remove arrows from number inputs
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      //remove arrows from number inputs for firefox
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+    }
+    .edit-destination-description {
+      label {
+        vertical-align: top;
+      }
+      textarea {
+        resize:vertical;
+      }
+    }
+    .edit-buttons input[type=submit],
+    .edit-buttons input[type=button]:first-child {
+      margin-right:10px;
+    }
+    .edit-destination-img {
+      border-top: 2px solid $darkGray;
+      padding-top: 20px;
+    }
+    .image-filename {
+      margin-left:0;
+      font-size: 0.85em;
+      display: block;
+      margin-bottom:7px;
+      word-break: break-word;
+    }
+  }
+
+  @media only screen and (max-width:800px) {
+    .edit-destination-form {
+      width:90%;
+    }
+  }
+
+  @media only screen and (max-width:650px) {
+    .edit-destination-form {
+      div {
+        label, input[type=text], input[type=file], textarea {
+          display:block;
+          margin-left:20px;
+          width:80%;
+        }
+        label {
+          margin-bottom:5px;
+        }
+      }
+      img, input[type=submit] {
+        margin-left:20px;
+      }
+    }
+  }
+
+  @media only screen and (max-width:450px) {
+    .edit-destination-form div {
+      input[type=text], textarea {
+        width:90%;
+      }
+    }
+  }
+
+  @media only screen and (max-width:350px) {
+    .edit-destination-form img {
+      width: 250px !important;
+    }
+  }
+//endregion
+
+//region reorders
+/* Prevent the text contents of draggable elements from being selectable. */
+#imageList {
+  padding:0;
+}
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+.listItem {
+  width: 25%;
+  display: inline-block;
+  padding:2.5%;
+  margin: Calc(10% / 4);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  &:nth-child(3n+1) {
+    margin-left:0;
+  }
+  &:nth-child(3n) {
+    margin-right:0;
+  }
+  &.orderChange {
+    cursor: grab;
+    &:active {
+      cursor:grabbing;
+    }
+  }
+  img {
+    width:100%;
+  }
+}
+
+.dataTransferClass {
+  background-color: brown;
+}
+
+.dragStartClass {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.listItem.over {
+  border-top: thick solid $darkGray;
+  border-top-width: 50px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+//endregion

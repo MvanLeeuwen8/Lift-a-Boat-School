@@ -1,0 +1,97 @@
+@import "../variables";
+
+//region login-form
+
+  // Basic login-form layout
+  #main.login {
+    width: 100%;
+
+    .logout {
+      position: absolute;
+      left: Calc(50% - 35px);
+      right: Calc(50% - 35px);
+      width: 70px;
+    }
+
+    h2 {
+      color: $darkblue;
+      text-align: center;
+    }
+
+    .login-form {
+      background-color: #888;
+      width: 40%;
+      border: $borderDark;
+      border-radius: $borderRadiusButton;
+      margin: auto;
+      display: block;
+      padding: 40px 20px;
+
+      // Label and inputs
+      label, input {
+        display: block;
+        margin: auto;
+      }
+
+      label {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 1.2em;
+        color: #fff;
+      }
+
+      input {
+        margin-bottom: 15px;
+        font-size: 1.1em;
+        width: 80%;
+      }
+    }
+  }
+//endregion
+
+//region login - mobile
+@media only screen and (max-width:1300px) {
+  #main.login .login-form {
+    width:50%;
+  }
+}
+
+@media only screen and (max-width:1100px) {
+  #main.login .login-form {
+    width:60%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  #main.login .login-form {
+    width:70%;
+  }
+}
+
+@media only screen and (max-width:750px) {
+  main.login .login-form {
+    width:80%;
+  }
+}
+
+@media only screen and (max-width:650px) {
+  main.login .login-form {
+    width:90%;
+    input {
+      font-size:1em;
+    }
+  }
+}
+
+@media only screen and (max-width:500px) {
+  main.login .login-form {
+    width:80%;
+  }
+}
+
+@media only screen and (max-width:420px) {
+  .login .login-form input {
+    width:90%;
+  }
+}
+//endregion

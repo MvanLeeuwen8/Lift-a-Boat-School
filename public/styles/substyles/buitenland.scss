@@ -1,0 +1,168 @@
+@import "../variables.css";
+
+//region buitenland
+  .buitenland {
+
+    img {
+      max-width:100%;
+    }
+
+    button {
+      padding: 12px 31px;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: $lightblue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+      text-align: justify;
+      margin-block-end: 0.5em;
+      margin-block-start: 1em;
+      font-weight: bold;
+      color: #1e6eb9;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    .full, .width-3-4, .quarter, .half, .width-2-3, .third {
+      display: inline-block;
+    }
+
+    .full {
+      margin-bottom:25px;
+      .right {
+        float:right;
+      }
+
+      p {
+        margin-block-start:0;
+      }
+    }
+
+    .width-3-4 {
+      width:70%;
+    }
+
+    .width-2-3 {
+      width:60%;
+    }
+
+    .third {
+      width:30%;
+    }
+
+    .quarter {
+      width:24%;
+    }
+
+    .half {
+      width:48%;
+
+    }
+
+    .download-link, .andere-downloads {
+      text-align: center;
+    }
+
+    .eigendomsbewijs-img {
+      display:block;
+      margin: 30px auto auto auto;
+    }
+  }
+//endregion
+
+//region buitenland - mobile
+    @media only screen and (min-width:1401px) {
+      .small-vaarregels, .small-schip, .small-icp {
+        display:none;
+      }
+    }
+    @media only screen and (max-width:1400px) {
+      .large-vaarregels, .large-schip, .large-icp {
+        display: none;
+      }
+      .small-icp {
+        margin-left:Calc(30% + 10%);
+      }
+    }
+
+    @media only screen and (min-width:1230px) {
+      .small-rijn {
+        display:none;
+      }
+    }
+    @media only screen and (max-width:1230px) {
+      .large-rijn {
+        display: none;
+      }
+      .small-rijn {
+        margin-left:Calc(24% + 6%);
+      }
+    }
+    @media only screen and (max-width:1010px) {
+      .buitenland h2 {
+        right:15%;
+      }
+    }
+
+    @media only screen and (max-width:970px) {
+      main.buitenland {
+        margin: auto;
+      }
+    }
+
+
+    @media only screen and (max-width:750px) {
+      .buitenland h2 {
+        left:15%;
+        position:unset;
+      }
+    }
+
+    @media only screen and (max-width:580px) {
+      .buitenland img.eigendomsbewijs-img {
+        max-width: 90vw;
+      }
+    }
+
+    @media only screen and (max-width:550px) {
+      .buitenland {
+        .full, .width-3-4, .quarter, .half, .width-2-3, .third {
+          width:100%;
+        }
+        .full h2 {
+          margin-left:0;
+        }
+        img {
+          margin:auto;
+          display: block;
+        }
+        .btn {
+          text-align: center;
+          display: block;
+          margin-bottom:20px;
+        }
+      }
+    }
+
+    @media only screen and (max-width:450px) {
+      .buitenland h2 {
+        top:10%;
+      }
+    }
+
+    @media only screen and (max-width:330px) {
+      .buitenland button {
+        padding: 12px 17px;
+      }
+    }
+//endregion

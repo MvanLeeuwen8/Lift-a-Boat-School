@@ -1,0 +1,79 @@
+@import "../variables";
+
+//region boten
+  //region popup-form boten
+
+  //default: display:none, until button is clicked
+  main.boten .popup-form #boatForm {
+    display:none;
+  }
+
+  .boten form {
+    padding: 30px;
+    width: 90%;
+
+    .formblock-wide {
+      display: flex;
+      margin-bottom: 10px;
+      width: 70%;
+
+      label {
+        width: 36.8%;
+      }
+
+      input {
+        border-radius: 3px;
+        width: 50%;
+        float: right;
+      }
+    }
+
+    .formblock-medium {
+      .form-half-md {
+        display: inline-block;
+        width: 50%;
+        &:last-child {
+          float:right;
+          label {
+            margin-left:2%;
+          }
+        }
+        &:first-child input {
+          margin-right: 2%;
+        }
+        .half-md-section {
+          display:inline-block;
+          width:100%;
+          margin-bottom:5px;
+          label, input {
+            display:inline-block;
+          }
+          label {
+            width:50%;
+          }
+          input {
+            width:44%;
+            float:right;
+          }
+        }
+      }
+    }
+
+    .formblock-submit {
+      input[type=submit] {
+        float: left;
+      }
+      input[type=button]{
+        float: right;
+      }
+    }
+  }
+  //endregion
+
+  //region table boten
+  .boat-table {
+    width:100%;
+    text-align: center;
+  }
+  //endregion
+//endregion

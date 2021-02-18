@@ -1,0 +1,104 @@
+@import "../variables";
+
+//region home/about us
+  .banner {
+    height:124px;
+
+    img {
+      position: absolute;
+      top: 74px;
+      height:153px;
+      max-width:100%;
+      object-fit: cover;
+      width:100%;
+      width: -webkit-fill-available;
+    }
+  }
+
+  .home {
+    // Basic styling
+
+    h2 {
+      text-align: justify;
+      margin-block-end: 1em;
+      margin-block-start: 1em;
+      font-weight: bold;
+      color: $darkblue;
+
+      &:first-child {
+        margin-top:0;
+      }
+    }
+
+    p {
+      //remove margin from first and final paragraph
+      &:first-child {
+        margin-top:0;
+      }
+      &:last-child {
+        margin-bottom:0;
+      }
+
+      &.next-destination {
+        color:$darkblue;
+        text-align: center;
+      }
+    }
+
+    p, h2 {
+      margin-block-end: 0.6em;
+      margin-block-start: 0.6em;
+    }
+    p.next-destination {
+      margin-block-end: 1em;
+      margin-block-start: 1em;
+      font-size:18px;
+    }
+
+    p, li {
+      text-align: justify;
+    }
+
+    //links
+    a {
+      color:$darkblue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+//endregion
+
+//region home/about us - smaller screens
+  @media only screen and (max-width:1010px) {
+    #main.home {
+      width:70%;
+      margin-right:15px;
+    }
+  }
+
+  @media only screen and (max-width:930px) {
+    .banner img {
+      top:41px;
+    }
+  }
+
+  @media only screen and (max-width:930px) {
+    @-moz-document url-prefix() {
+      .banner img {
+        top: 40px;
+      }
+    }
+  }
+
+  @media only screen and (max-width:750px) {
+    #main.home {
+      width:90%;
+      float:unset;
+      margin:auto;
+      display:block;
+      padding-bottom: 45.6px;
+    }
+  }
+//endregion

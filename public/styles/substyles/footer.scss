@@ -1,0 +1,159 @@
+@import "../variables";
+
+//region footer
+
+  .footer-outside {
+    height:80px;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  #footer {
+    color: #fff;
+    height: 85px;
+    background-color: $darkGray;
+    font-size:13px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+
+    .footer-part {
+      display: inline-block;
+      width: 40%;
+
+      // left part of the footer
+      &.left-footer {
+        padding-left:20px;
+        padding-right:20px;
+        width:18%;
+        text-align: left;
+        float: left;
+
+        // logo in footer
+        .logo-ftr-section .logo-ftr {
+          height: 45px;
+          display: block;
+          margin:20px auto;
+        }
+      }
+
+      // right part of the footer
+      &.right-footer {
+        padding-right:60px;
+        text-align: right;
+        float: right;
+        height: 40px;
+        vertical-align: middle;
+        margin-top: 22.5px;
+      }
+    }
+  }
+
+//endregion
+
+//region footer - mobile
+  @media only screen and (max-width: 1100px) {
+    #footer .logo-ftr-section .logo-ftr {
+      width:250px;
+    }
+  }
+
+  @media only screen and (max-width:970px) {
+    #footer {
+      margin:30px auto auto;
+    }
+  }
+
+  @media only screen and (min-width:769px) {
+    #footer .copyright-mobile {
+      display:none;
+    }
+  }
+
+  @media only screen and (max-width:769px) {
+    #footer .copyright {
+      display:none;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    footer .footer-part {
+      width: 100%;
+      display: block;
+
+      &.left-footer,
+      &.middle-footer,
+      &.right-footer {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+        display:flow-root;
+        .logo-ftr {
+          float:none;
+        }
+      }
+    }
+    #footer .copyright-mobile {
+      width: 80%;
+      text-align: center;
+      margin: auto;
+      float: none
+    }
+  }
+
+  @media only screen and (max-width:750px) {
+    .footer-outside {
+      height: 105px;
+    }
+  }
+
+  @media only screen and (min-width:480px) {
+    #footer .footer-part.right-footer span {
+      display:none;
+    }
+  }
+
+  @media only screen and (max-width:480px) {
+    .footer-outside {
+      height:110px;
+    }
+    #footer {
+      height:90px;
+      .footer-part {
+        display: inline-block;
+        width: 100%;
+        &.left-footer {
+          float: unset;
+          display: block;
+          margin: auto;
+          width: 100%;
+          padding:0;
+          .logo-ftr-section .logo-ftr {
+            float:unset;
+            display:block;
+            margin:auto;
+          }
+        }
+        &.right-footer {
+          position: absolute;
+          bottom: 9px;
+          text-align: center;
+          display:block;
+          margin:auto;
+          padding-right:0;
+          float:unset;
+          height:auto;
+          br {
+            display:none;
+          }
+        }
+        .logo-ftr-section {
+          position: relative;
+          bottom: -11px;
+        }
+      }
+    }
+  }
+//endregion

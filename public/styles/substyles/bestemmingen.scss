@@ -1,0 +1,346 @@
+@import "../variables";
+
+//region slideshow
+.bestemmingen .image-slideshow {
+  button, .bekijk-meer a {
+    font-size: 41px;
+    position: fixed;
+    top: 19vh;
+    right: 5vw;
+    background-color: $darkGray;
+    border: solid 2px $darkGray;
+    transition: 0.6s ease;
+    border-radius: 3px 3px 3px 3px;
+    padding-bottom:5px;
+    &:hover {
+      color: $darkGray;
+      background-color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+    }
+  }
+}
+  .image-slideshow {
+    display: none;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    .slider-images {
+      display:flex;
+      width: 80vw;
+      height: 65vh;
+      margin: auto;
+
+      .inactive {
+        display:none;
+        img {
+          cursor: pointer;
+        }
+        p {
+          margin-block-start: 0;
+          position: fixed;
+          top: 81vh;
+          color: white;
+          text-align: center;
+          float: unset;
+          left: 10vw;
+          right: 10vw;
+        }
+      }
+      .active {
+        display:block;
+        margin:auto;
+      }
+    }
+    .prev, .next {
+      cursor: pointer;
+      width: auto;
+      color: #fff;
+      font-weight: bold;
+      font-size: 50px;
+      transition: 0.6s ease;
+      border-radius: 3px 3px 3px 3px;
+      user-select: none;
+      position: fixed;
+      top: calc(46% - 25px);
+      display: inline-block;
+      vertical-align: top;
+      border: solid 2px $darkGray;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding-right: 10px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+
+      &:hover {
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.6);
+        color: $darkGray;
+      }
+    }
+    .next {
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+      //margin-left: -41.6px;
+      right:5vw;
+    }
+    .prev {
+      left:5vw;
+    }
+
+    img {
+      max-width: 80vw;
+      max-height: 60vh;
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+    }
+  }
+  //endregion
+
+  //region bestemmingen-algemeen
+  .bestemmingen {
+    display: block;
+    padding-left:20px;
+    width:auto;
+    h2, .form-button {
+      margin-left:2.5%;
+    }
+    button {
+      background-color:$darkblue;
+      border-color:$darkblue;
+    }
+
+    //region displayed destinations
+    .bestemming-single {
+      margin: 15px auto;
+      border-bottom: white solid 2px;
+      padding: 10px 0;
+
+      // don't set border on the last destination
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .bestemming-img-caption {
+        width: 18%;
+        display: inline-block;
+        text-align: center;
+        min-width: 180px;
+
+        img {
+          height: 180px;
+          width: 180px;
+          overflow: hidden;
+          object-fit: cover;
+          display: block;
+          margin: auto;
+        }
+
+        figcaption {
+          text-align: center;
+        }
+      }
+
+      .bestemming-text {
+        width: 69%;
+        margin-left: 3%;
+        display: inline-block;
+        text-align: justify;
+        vertical-align: top;
+
+        p {
+          margin-top: 18px;
+
+          .inschrijven-destination {
+            float: unset;
+            display: inline-block;
+          }
+          .bekijk-meer {
+            float: left;
+            display: flex;
+            button {
+              margin:10px 10px 0 0;
+            }
+          }
+
+          .delete-destination, .update-destination {
+            float: right;
+          }
+
+          .bestemming-price, .taxes {
+            text-align: left;
+            display: block;
+            margin-block-end: 0;
+            margin-block-start: 0;
+          }
+
+          .bestemming-price {
+            margin-top:1em;
+          }
+
+          .taxes {
+            font-size: 0.9em;
+            line-height: 0.9em;
+            margin-top:0.3em;
+            margin-bottom:0.6em;
+          }
+        }
+      }
+
+      .update-delete-button {
+        margin: 10px 5px 0 5px;
+      }
+    }
+    //endregion
+
+    //region popup form add destination
+    #popupForm {
+      padding-bottom:20px;
+      margin-bottom:20px;
+      margin-left:2.5%;
+      border-bottom: 3px #fff dashed;
+      h2 {
+        margin-left:0;
+      }
+      .bestemmingForm-section {
+        float:left;
+        width:100%;
+        label {
+          min-width:30%;
+          display:inline-block;
+          vertical-align: top;
+        }
+        input[type=text], textarea {
+          width:50%;
+        }
+        input[type=text], input[type=date], input[type=file], input[type=number], textarea {
+          margin-bottom:10px;
+        }
+        input[type=date], input[type=number] {
+          width:150px;
+        }
+        .bestemming-info label {
+          vertical-align: top;
+        }
+        .bestemming-price-left, .bestemming-price-right {
+          width:50%;
+        }
+        &.bestemming-price {
+          .bestemming-price-left {
+            float:left;
+          }
+          .bestemming-price-right {
+            float:right;
+          }
+          //remove arrows from number inputs
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          //remove arrows from number inputs for firefox
+          input[type=number] {
+            -moz-appearance: textfield;
+          }
+        }
+        .bestemming-submit-cancel {
+          margin-bottom:30px;
+        }
+      }
+    }
+    //endregion
+  }
+  //endregion
+
+  //region bestemmingen - mobiel
+  @media only screen and (max-width: 1010px) {
+    #bestemmingen .bestemmingen {
+      width:80%;
+    }
+  }
+
+  @media only screen and (max-width:970px) {
+    main.bestemmingen {
+      padding-left:0;
+      width:90%;
+      h2, .form-button {
+        margin-left:0;
+      }
+      #popupForm {
+        margin-left:0;
+      }
+      .bestemming-single {
+        .bestemming-text {
+          margin-left:0;
+          p {
+            width: 90%;
+            margin: 18px auto auto auto;
+          }
+        }
+        .bestemming-img-caption {
+          width:auto;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width:800px) {
+    #bestemmingen .bestemmingen {
+      width: 85%;
+    }
+    .bestemmingen #popupForm .bestemmingForm-section {
+      label {
+        display:block;
+      }
+      input[type=text], textarea {
+        width:80%;
+      }
+    }
+  }
+
+  @media only screen and (max-width:720px) {
+    #bestemmingen .bestemmingen {
+      width:90%;
+    }
+    .bestemmingen .bestemming-single .bestemming-text {
+      width:65%;
+    }
+  }
+
+  @media only screen and (max-width:650px) {
+    .bestemmingen .bestemming-single {
+      .bestemming-img-caption {
+        display: block;
+        width: 80%;
+        margin: auto;
+        img {
+          height: auto;
+          width: 80%;
+        }
+      }
+      .bestemming-text {
+        width:100%;
+      }
+    }
+  }
+
+  @media only screen and (max-width:400px) {
+    .bestemmingen #popupForm .bestemmingForm-section {
+      input[type=text], textarea {
+        width:100%;
+      }
+    }
+    .bestemmingen .bestemming-single .bestemming-img-caption img {
+      width:90%;
+    }
+  }
+//endregion

@@ -1,0 +1,86 @@
+.bestemmingen {
+  display: grid;
+}
+.bestemmingen .bestemming-single {
+  margin: 15px auto;
+  border-bottom: white solid 2px;
+  padding: 10px 0;
+  overflow: auto;
+}
+.bestemmingen .bestemming-single:last-child {
+  border-bottom: none;
+}
+.bestemmingen .bestemming-single .bestemming-img-caption {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+}
+.bestemmingen .bestemming-single .bestemming-img-caption img {
+  display: inline-block;
+  margin-right: 3%;
+  width: 100%;
+}
+.bestemmingen .bestemming-single .bestemming-img-caption figcaption {
+  margin-right: 3%;
+  font-weight: bold;
+  text-align: center;
+}
+.bestemmingen .bestemming-single .bestemming-text {
+  max-width: 69%;
+  margin-left: 3%;
+  display: inline-block;
+  text-align: justify;
+  vertical-align: top;
+}
+.bestemmingen .bestemming-single .bestemming-text p {
+  margin-top: 0;
+}
+.bestemmingen .bestemming-single .update-delete-button {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.bestemmingen #popupForm {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-left: 2%;
+  border-bottom: 3px #fff dashed;
+}
+.bestemmingen #popupForm .bestemmingForm-section label {
+  min-width: 30%;
+  display: inline-block;
+}
+.bestemmingen #popupForm .bestemmingForm-section input[type=text], .bestemmingen #popupForm .bestemmingForm-section textarea {
+  width: 50%;
+}
+.bestemmingen #popupForm .bestemmingForm-section input[type=text] {
+  margin-bottom: 10px;
+}
+.bestemmingen #popupForm .bestemmingForm-section .bestemming-info label {
+  vertical-align: top;
+}
+
+@media only screen and (max-width: 800px) {
+  .bestemmingen #popupForm .bestemmingForm-section label {
+    display: block;
+  }
+  .bestemmingen #popupForm .bestemmingForm-section input[type=text], .bestemmingen #popupForm .bestemmingForm-section textarea {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .bestemmingen .bestemming-single .bestemming-img-caption {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+  .bestemmingen .bestemming-single .bestemming-text {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .bestemmingen #popupForm .bestemmingForm-section input[type=text], .bestemmingen #popupForm .bestemmingForm-section textarea {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=bestemmingen.css.map */

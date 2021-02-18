@@ -1,0 +1,226 @@
+.inschrijven {
+  display: grid;
+}
+.inschrijven form {
+  padding: 30px;
+  width: 90%;
+}
+.inschrijven form .formblock-wide {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  float: right;
+}
+.inschrijven form .formblock-wide label {
+  width: 70%;
+  font-size: 1.5em;
+}
+.inschrijven form .formblock-wide select, .inschrijven form .formblock-wide input {
+  width: 20%;
+  float: right;
+}
+.inschrijven form .formblock-wide select {
+  height: 2em;
+}
+.inschrijven form .formblock-wide input[type=date] {
+  height: 1.85em;
+}
+.inschrijven form .formblock-about {
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 5%;
+  display: block;
+  float: left;
+}
+.inschrijven form .formblock-about .formblock-medium {
+  display: flex;
+  margin-bottom: 10px;
+}
+.inschrijven form .formblock-about .formblock-medium label {
+  width: 30%;
+}
+.inschrijven form .formblock-about .formblock-medium label.lbl-tel {
+  width: 60%;
+}
+.inschrijven form .formblock-about .formblock-medium input {
+  width: 70%;
+  float: right;
+}
+.inschrijven form .formblock-about .formblock-medium input[type=tel] {
+  width: 50%;
+  float: right;
+}
+.inschrijven form .formblock-about .formblock-medium .small {
+  display: inline-block;
+  width: 30%;
+}
+.inschrijven form .formblock-about .formblock-medium.medium {
+  display: inline-flex;
+  width: 72%;
+}
+.inschrijven form .formblock-about .formblock-medium.medium label {
+  width: 50%;
+}
+.inschrijven form .formblock-about .formblock-type {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.inschrijven form .formblock-about .formblock-type label {
+  width: 35%;
+  display: inline-block;
+}
+.inschrijven form .formblock-about .formblock-type select {
+  width: 28%;
+  padding: 1px 2px;
+}
+.inschrijven form .formblock-about .formblock-afmetingen {
+  margin-bottom: 10px;
+}
+.inschrijven form .formblock-about .formblock-afmetingen label {
+  width: 60%;
+  display: inline-block;
+}
+.inschrijven form .formblock-about .formblock-afmetingen input {
+  width: 20%;
+}
+.inschrijven form .formblock-about .formblock-afmetingen .achtervoegsel {
+  display: inline;
+}
+.inschrijven form .foto-jacht {
+  display: block;
+  width: 35%;
+  float: right;
+}
+.inschrijven form .foto-jacht label {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+.inschrijven form .foto-jacht input {
+  float: right;
+  width: 50%;
+  border: none;
+}
+.inschrijven form .formblock-large {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.inschrijven form .formblock-large label {
+  margin-bottom: 5px;
+  display: block;
+}
+.inschrijven form .formblock-large textarea {
+  resize: vertical;
+  min-width: 100%;
+}
+.inschrijven form .formblock-submit input[type=submit] {
+  margin-left: 15%;
+  float: left;
+}
+.inschrijven form .formblock-submit input[type=button] {
+  float: right;
+  margin-right: 15%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .inschrijven #inschrijfform .foto-jacht label, .inschrijven #inschrijfform .foto-jacht input {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+  .inschrijven #inschrijfform .foto-jacht label {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .inschrijven form .formblock-wide label {
+    display: block;
+    width: 100%;
+  }
+  .inschrijven form .formblock-wide select,
+.inschrijven form .formblock-wide input[type=date] {
+    float: left;
+    width: 30%;
+    margin-top: 10px;
+  }
+  .inschrijven form .formblock-about {
+    width: 100%;
+  }
+  .inschrijven form .formblock-about .formblock-medium label {
+    width: 30%;
+  }
+  .inschrijven form .formblock-about .formblock-medium .small {
+    display: flex;
+    width: 30%;
+  }
+  .inschrijven form .formblock-about .formblock-medium .lbl-tel {
+    width: 60%;
+  }
+  .inschrijven form .foto-jacht {
+    width: 100%;
+  }
+  .inschrijven form .foto-jacht input {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .inschrijven form .formblock-wide label {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .inschrijven form .formblock-about .formblock-medium label, .inschrijven form .formblock-about .formblock-medium.medium label {
+    width: 40%;
+  }
+  .inschrijven form .formblock-about .formblock-medium.medium {
+    width: 100%;
+  }
+  .inschrijven form .formblock-about .formblock-medium .postal-code {
+    width: 36%;
+  }
+  .inschrijven form .formblock-about .formblock-afmetingen label {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .inschrijven {
+    width: 90%;
+    padding: 20px 10px;
+  }
+  .inschrijven #inschrijfform {
+    padding: 30px 10px;
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .inschrijven #inschrijfform .formblock-wide select, .inschrijven #inschrijfform .formblock-wide input {
+    width: 150px;
+  }
+  .inschrijven #inschrijfform .formblock-about .formblock-medium {
+    display: block;
+  }
+  .inschrijven #inschrijfform .formblock-about .formblock-medium label {
+    width: 100%;
+    display: block;
+  }
+  .inschrijven #inschrijfform .formblock-about .formblock-medium input {
+    float: none;
+    width: 200px;
+  }
+  .inschrijven #inschrijfform .formblock-afmetingen {
+    display: block;
+  }
+  .inschrijven #inschrijfform .formblock-afmetingen label {
+    width: 100%;
+    display: block;
+  }
+  .inschrijven #inschrijfform .formblock-afmetingen input {
+    float: none;
+    width: 100px;
+  }
+}
+
+/*# sourceMappingURL=inschrijvingen.css.map */

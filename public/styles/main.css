@@ -1,0 +1,2667 @@
+@import "../variables.css";
+.nav-outside {
+  height: 80px;
+  width: 100%;
+}
+
+nav {
+  background-color: rgba(21, 21, 23, 0.95);
+  border-bottom: rgba(21, 21, 23, 0.95) solid 2px;
+  border-top: rgba(21, 21, 23, 0.95) solid 2px;
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 72px;
+}
+nav #navLinks {
+  width: 78%;
+  margin-left: calc(18% + 40px);
+  margin-top: 16.2px;
+  margin-bottom: 16.2px;
+}
+nav a {
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+nav .logo-nav {
+  display: inline-block;
+  bottom: -4px;
+  position: absolute;
+  left: 60px;
+}
+nav .logo-nav a {
+  padding: 0;
+  margin-top: 50px;
+  display: initial;
+}
+nav .logo-nav a img {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  top: 128px;
+  background-color: #fff;
+  border: #fff 6px solid;
+  border-radius: 50%;
+  box-shadow: 6px 6px 8px 2px black;
+}
+nav #current-page {
+  background-color: #fff;
+  color: rgba(21, 21, 23, 0.95);
+}
+nav .facebook-navbar {
+  float: right;
+  margin-right: 70px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-top: -0.25em;
+  position: absolute;
+  right: 9px;
+  top: 16.5px;
+  transition-duration: 0.5s;
+}
+nav .facebook-navbar p {
+  margin-top: 0;
+}
+nav .facebook-navbar:hover {
+  transform: perspective(1px) scale(1.1);
+  transition-duration: 0.5s;
+}
+
+@media only screen and (max-width: 1140px) {
+  nav #navLinks {
+    margin-left: 18%;
+  }
+  nav .logo-nav a img {
+    height: 100px;
+    width: 100px;
+    top: 55px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  nav .facebook-navbar {
+    margin-right: 40px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  nav .hover-underline {
+    width: 80vw;
+  }
+
+  nav {
+    height: 29px;
+  }
+  nav .logo-nav {
+    display: none;
+  }
+  nav .logo-nav-mobile {
+    display: inline-block;
+    width: 25%;
+    position: fixed;
+  }
+  nav .logo-nav-mobile img {
+    height: 100px;
+    width: 100px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 6px 6px 8px 2px black;
+  }
+
+  .facebook-navbar {
+    display: none !important;
+  }
+
+  nav#navbar {
+    padding-left: 0;
+    padding-bottom: 10px;
+  }
+
+  nav a {
+    display: block;
+    text-align: center;
+    margin: auto !important;
+  }
+  nav a:first-child {
+    margin-top: 13px !important;
+  }
+
+  #checkbox {
+    float: right;
+  }
+
+  nav #navLinks {
+    width: 100%;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transition: transform 0.5s;
+    margin-left: 0;
+    background-color: rgba(21, 21, 23, 0.95);
+  }
+  nav #navLinks .hover-underline {
+    transition: height 0.5s ease-in;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 45px;
+    height: 32px;
+    position: absolute;
+    top: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    left: 82%;
+  }
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #fff;
+  }
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    left: 85%;
+    top: 7px;
+  }
+  #menuToggle span:first-child {
+    transform-origin: 0 0;
+  }
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0 100%;
+  }
+}
+@media only screen and (max-width: 930px) and (max-height: 370px) {
+  nav a {
+    padding: 5px;
+  }
+  nav a:first-child {
+    margin-top: 0;
+  }
+
+  nav .logo-nav-mobile img {
+    height: 60px;
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 930px) and (max-height: 320px) {
+  nav a {
+    padding: 4px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  nav a {
+    width: 60px;
+  }
+
+  nav .logo-nav-mobile img {
+    height: 60px;
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  nav a {
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  nav a {
+    width: 60px;
+  }
+}
+@media only screen and (min-width: 930px) {
+  #menuToggle input,
+#menuToggle span,
+.logo-nav-mobile {
+    display: none;
+  }
+
+  .facebook-nav-mobile {
+    display: none !important;
+  }
+}
+.footer-outside {
+  height: 80px;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#footer {
+  color: #fff;
+  height: 85px;
+  background-color: rgba(21, 21, 23, 0.95);
+  font-size: 13px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+}
+#footer .footer-part {
+  display: inline-block;
+  width: 40%;
+}
+#footer .footer-part.left-footer {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 18%;
+  text-align: left;
+  float: left;
+}
+#footer .footer-part.left-footer .logo-ftr-section .logo-ftr {
+  height: 45px;
+  display: block;
+  margin: 20px auto;
+}
+#footer .footer-part.right-footer {
+  padding-right: 60px;
+  text-align: right;
+  float: right;
+  height: 40px;
+  vertical-align: middle;
+  margin-top: 22.5px;
+}
+
+@media only screen and (max-width: 1100px) {
+  #footer .logo-ftr-section .logo-ftr {
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 970px) {
+  #footer {
+    margin: 30px auto auto;
+  }
+}
+@media only screen and (min-width: 769px) {
+  #footer .copyright-mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 769px) {
+  #footer .copyright {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .footer-part {
+    width: 100%;
+    display: block;
+  }
+  footer .footer-part.left-footer, footer .footer-part.middle-footer, footer .footer-part.right-footer {
+    float: none;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flow-root;
+  }
+  footer .footer-part.left-footer .logo-ftr, footer .footer-part.middle-footer .logo-ftr, footer .footer-part.right-footer .logo-ftr {
+    float: none;
+  }
+
+  #footer .copyright-mobile {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    float: none;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .footer-outside {
+    height: 105px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #footer .footer-part.right-footer span {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer-outside {
+    height: 110px;
+  }
+
+  #footer {
+    height: 90px;
+  }
+  #footer .footer-part {
+    display: inline-block;
+    width: 100%;
+  }
+  #footer .footer-part.left-footer {
+    float: unset;
+    display: block;
+    margin: auto;
+    width: 100%;
+    padding: 0;
+  }
+  #footer .footer-part.left-footer .logo-ftr-section .logo-ftr {
+    float: unset;
+    display: block;
+    margin: auto;
+  }
+  #footer .footer-part.right-footer {
+    position: absolute;
+    bottom: 9px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding-right: 0;
+    float: unset;
+    height: auto;
+  }
+  #footer .footer-part.right-footer br {
+    display: none;
+  }
+  #footer .footer-part .logo-ftr-section {
+    position: relative;
+    bottom: -11px;
+  }
+}
+.bestemming-single .bestemming-img-caption h2, .bestemming-single h2, .bestemming-single-sidebar .bestemming-img-caption h2, .bestemming-single-sidebar h2 {
+  color: #1e6eb9;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-left: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.bestemming-single figcaption, .bestemming-single-sidebar figcaption {
+  font-size: 0.85em;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.left-sidebar, .right-sidebar {
+  width: 18%;
+  display: inline-block;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+.left-sidebar .destinations-sidebar .bestemming-single-sidebar, .right-sidebar .destinations-sidebar .bestemming-single-sidebar {
+  margin-bottom: 20px;
+  height: 225px;
+}
+.left-sidebar .destinations-sidebar .bestemming-single-sidebar .destination-sidebar-date, .right-sidebar .destinations-sidebar .bestemming-single-sidebar .destination-sidebar-date {
+  font-size: 0.9em;
+}
+.left-sidebar .destination-sidebar-img, .right-sidebar .destination-sidebar-img {
+  height: 180px;
+  width: 180px;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+.left-sidebar {
+  float: left;
+}
+
+.right-sidebar {
+  float: right;
+}
+
+.left-sidebar .tooltip .tooltip-text, .right-sidebar .tooltip .tooltip-text, .bottom-sidebar-mobile .tooltip .tooltip-text {
+  visibility: hidden;
+  width: 400px;
+  background-color: rgba(21, 21, 23, 0.95);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  padding: 10px 15px;
+  font-size: 0.9em;
+  margin-top: -184px;
+}
+.left-sidebar .tooltip:hover .tooltip-text, .right-sidebar .tooltip:hover .tooltip-text, .bottom-sidebar-mobile .tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.left-sidebar .tooltip-text {
+  left: 17%;
+}
+
+.right-sidebar .tooltip-text {
+  right: 17%;
+}
+
+@media (hover: none) {
+  .left-sidebar .tooltip .tooltip-text, .right-sidebar .tooltip .tooltip-text, .bottom-sidebar-mobile .tooltip .tooltip-text {
+    visibility: hidden !important;
+  }
+}
+main .tooltip .tooltip-text {
+  display: none;
+}
+
+.inschrijven-left-sidebar .destinations-sidebar:after, .inschrijven-right-sidebar .destinations-sidebar:after, .inschrijven-bottom-sidebar .destinations-sidebar:after {
+  content: "";
+  background: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  top: calc(74px + 153px);
+  bottom: 85px;
+  z-index: 1;
+  width: calc(18% + 30px);
+}
+
+.inschrijven-left-sidebar .destinations-sidebar:after,
+.inschrijven-bottom-sidebar .destinations-sidebar:after {
+  left: 0;
+}
+
+.inschrijven-right-sidebar .destinations-sidebar:after {
+  right: 0;
+}
+
+@media only screen and (max-width: 1350px) {
+  .left-sidebar, .right-sidebar {
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 1010px) {
+  .right-sidebar, .left-sidebar {
+    display: none;
+  }
+
+  main#main {
+    width: 73%;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 1010px) {
+  .bottom-sidebar-mobile {
+    width: 23%;
+    float: left;
+    margin-top: 60px;
+    text-align: center;
+  }
+  .bottom-sidebar-mobile img {
+    height: 180px;
+    width: 180px;
+    overflow: hidden;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+  }
+  .bottom-sidebar-mobile span {
+    text-align: center;
+    margin: auto;
+    display: block;
+  }
+  .bottom-sidebar-mobile.inschrijven-bottom-sidebar .destinations-sidebar:after {
+    width: 23%;
+  }
+}
+@media only screen and (min-width: 1010px) {
+  .bottom-sidebar-mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 840px) and (min-width: 750px) {
+  .bottom-sidebar-mobile img {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  main#main {
+    width: 90%;
+    display: block;
+  }
+
+  .left-sidebar {
+    display: none;
+  }
+
+  .bottom-sidebar-mobile {
+    display: block;
+  }
+  .bottom-sidebar-mobile .bestemming-single-sidebar {
+    display: inline-block;
+    width: 30%;
+    margin: auto 1.666666%;
+  }
+  .bottom-sidebar-mobile .bestemming-single-sidebar .destination-sidebar-img {
+    width: 100%;
+    object-fit: cover;
+    height: 149px;
+  }
+  .bottom-sidebar-mobile.inschrijven-bottom-sidebar .destinations-sidebar:after {
+    content: none;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .bottom-sidebar-mobile .bestemming-single-sidebar {
+    width: 45%;
+    margin: 0 2.5% 15px 2.5%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .bottom-sidebar-mobile .bestemming-single-sidebar {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .bottom-sidebar-mobile .bestemming-single-sidebar {
+    width: 90%;
+  }
+}
+input, select, textarea {
+  border: 1px solid rgba(21, 21, 23, 0.95);
+  border-radius: 3px;
+  font-family: "Segoe UI", sans-serif;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type=file] {
+  border: none;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=date]:focus, input[type=number]:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00a0dc;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.popup-form #popupForm, #updateForm {
+  display: none;
+}
+
+input[type=submit], input[type=button], .form-button, .update-delete-button, button {
+  border-radius: 8px;
+  background-color: #1e6eb9;
+  border: 1px solid #1e6eb9;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #fff;
+  width: max-content;
+}
+input[type=submit]:hover, input[type=button]:hover, .form-button:hover, .update-delete-button:hover, button:hover {
+  text-decoration: underline;
+}
+input[type=submit]:focus, input[type=button]:focus, .form-button:focus, .update-delete-button:focus, button:focus {
+  outline: none;
+}
+
+.upload-btn {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #f0f0f0;
+  padding: 2px 7px;
+  border: 1px solid rgba(21, 21, 23, 0.95);
+  color: black;
+  text-decoration: none;
+  font-size: calc(40px / 3);
+  font-family: sans-serif;
+  vertical-align: middle !important;
+  min-width: auto !important;
+  width: auto !important;
+}
+.upload-btn:hover {
+  background-color: #cfcfcf;
+  cursor: pointer;
+}
+
+.edit-form {
+  width: 70%;
+  padding: 20px;
+  margin: 30px auto auto auto;
+}
+.edit-form .tox {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.edit-form label {
+  min-width: 30%;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+}
+.edit-form p, .edit-form span {
+  margin-left: 20px;
+  margin-block-start: 0;
+}
+.edit-form input[type=text], .edit-form textarea {
+  min-width: 60%;
+}
+.edit-form textarea {
+  resize: vertical;
+}
+.edit-form .imagebutton {
+  display: inline-block;
+  margin-left: calc(10%/4);
+  margin-right: calc(10%/4);
+}
+.edit-form .imagebutton:nth-child(3n+1) {
+  margin-left: 0;
+}
+.edit-form .imagebutton:nth-child(3n) {
+  margin-right: 0;
+}
+.edit-form .imagebutton img {
+  max-width: 100%;
+  max-height: 250px;
+  margin: auto;
+  display: block;
+}
+.edit-form .imagebutton label {
+  margin-left: 0;
+  margin-bottom: -30px;
+}
+.edit-form .imagebutton input {
+  display: block;
+  margin: auto;
+}
+.edit-form .imagebutton input[type=button] {
+  margin-bottom: 10px;
+}
+.edit-form .imagebutton input[type=checkbox] {
+  margin-bottom: 30px;
+}
+.edit-form .imagebutton textarea {
+  width: 100%;
+}
+.edit-form .edit-price-left, .edit-form .edit-price-right {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+.edit-form .edit-price-left input::-webkit-outer-spin-button,
+.edit-form .edit-price-left input::-webkit-inner-spin-button, .edit-form .edit-price-right input::-webkit-outer-spin-button,
+.edit-form .edit-price-right input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.edit-form .edit-price-left input[type=number], .edit-form .edit-price-right input[type=number] {
+  -moz-appearance: textfield;
+}
+.edit-form .edit-destination-description label {
+  vertical-align: top;
+}
+.edit-form .edit-destination-description textarea {
+  resize: vertical;
+}
+.edit-form .edit-buttons input[type=submit],
+.edit-form .edit-buttons input[type=button]:first-child {
+  margin-right: 10px;
+}
+.edit-form .edit-destination-img {
+  border-top: 2px solid rgba(21, 21, 23, 0.95);
+  padding-top: 20px;
+}
+.edit-form .image-filename {
+  margin-left: 0;
+  font-size: 0.85em;
+  display: block;
+  margin-bottom: 7px;
+  word-break: break-word;
+}
+
+@media only screen and (max-width: 800px) {
+  .edit-destination-form {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .edit-destination-form div label, .edit-destination-form div input[type=text], .edit-destination-form div input[type=file], .edit-destination-form div textarea {
+    display: block;
+    margin-left: 20px;
+    width: 80%;
+  }
+  .edit-destination-form div label {
+    margin-bottom: 5px;
+  }
+  .edit-destination-form img, .edit-destination-form input[type=submit] {
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .edit-destination-form div input[type=text], .edit-destination-form div textarea {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .edit-destination-form img {
+    width: 250px !important;
+  }
+}
+/* Prevent the text contents of draggable elements from being selectable. */
+#imageList {
+  padding: 0;
+}
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+.listItem {
+  width: 25%;
+  display: inline-block;
+  padding: 2.5%;
+  margin: calc(10% / 4);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.listItem:nth-child(3n+1) {
+  margin-left: 0;
+}
+.listItem:nth-child(3n) {
+  margin-right: 0;
+}
+.listItem.orderChange {
+  cursor: grab;
+}
+.listItem.orderChange:active {
+  cursor: grabbing;
+}
+.listItem img {
+  width: 100%;
+}
+
+.dataTransferClass {
+  background-color: brown;
+}
+
+.dragStartClass {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.listItem.over {
+  border-top: thick solid rgba(21, 21, 23, 0.95);
+  border-top-width: 50px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(21, 21, 23, 0.95);
+  /* Black w/ opacity */
+}
+.modal .prev, .modal .next {
+  top: calc(50% - 30px);
+  position: fixed;
+  color: rgba(21, 21, 23, 0.95);
+  padding: 5px 10px 12px 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 3px 3px 3px 3px;
+}
+.modal .prev:hover, .modal .next:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(21, 21, 23, 0.95);
+}
+.modal .prev {
+  left: 10vw;
+}
+.modal .next {
+  right: 10vw;
+}
+.modal .modal-content {
+  margin: auto;
+  max-width: 80vw;
+  max-height: 80vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal .modal-content #modal-image {
+  max-width: 80vw;
+  max-height: 80vh;
+  margin: auto;
+  display: block;
+}
+.modal .modal-content #img-text {
+  color: white;
+}
+
+.banner {
+  height: 124px;
+}
+.banner img {
+  position: absolute;
+  top: 74px;
+  height: 153px;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  width: -webkit-fill-available;
+}
+
+.home h2 {
+  text-align: justify;
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+  font-weight: bold;
+  color: #1e6eb9;
+}
+.home h2:first-child {
+  margin-top: 0;
+}
+.home p:first-child {
+  margin-top: 0;
+}
+.home p:last-child {
+  margin-bottom: 0;
+}
+.home p.next-destination {
+  color: #1e6eb9;
+  text-align: center;
+}
+.home p, .home h2 {
+  margin-block-end: 0.6em;
+  margin-block-start: 0.6em;
+}
+.home p.next-destination {
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+  font-size: 18px;
+}
+.home p, .home li {
+  text-align: justify;
+}
+.home a {
+  color: #1e6eb9;
+  text-decoration: none;
+}
+.home a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1010px) {
+  #main.home {
+    width: 70%;
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .banner img {
+    top: 41px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  @-moz-document url-prefix() {
+    .banner img {
+      top: 40px;
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  #main.home {
+    width: 90%;
+    float: unset;
+    margin: auto;
+    display: block;
+    padding-bottom: 45.6px;
+  }
+}
+.contact a {
+  color: #00a0dc;
+}
+.contact #contactForm {
+  margin: auto;
+}
+.contact #contactForm .contact-intro {
+  width: 80%;
+  margin: 0 auto 20px auto;
+}
+.contact #contactForm label {
+  width: 20%;
+  display: inline-block;
+  margin-left: 10%;
+  float: left;
+  font-size: 1.5em;
+}
+.contact #contactForm input, .contact #contactForm textarea {
+  width: 40%;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.contact #contactForm input[type=submit] {
+  margin-left: 38%;
+  width: 25%;
+  margin-bottom: 70px;
+}
+.contact #contactForm input[type=email], .contact #contactForm input[type=text] {
+  height: 2.5em;
+}
+.contact #contactForm textarea {
+  resize: vertical;
+  margin-top: 3px;
+}
+.contact #contactForm .contact-captcha input {
+  margin-bottom: 10px;
+}
+.contact #contactForm .captcha-img {
+  margin-left: calc(50% - 200px / 2);
+  height: 60px;
+}
+.contact #contactForm .captcha-img svg {
+  vertical-align: top;
+  height: calc(100% - (1.5em / 2));
+  margin-left: 10px;
+  color: #1e6eb9;
+  width: 1.5em;
+}
+.contact #contactForm .captcha-img svg:hover {
+  cursor: pointer;
+}
+.contact .contactlinks {
+  border-top: 2px solid #00a0dc;
+  padding-top: 30px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.contact .contactlinks a {
+  display: inline-block;
+  margin: auto 10px;
+}
+.contact .contactlinks a.tel {
+  float: left;
+}
+.contact .contactlinks a.mail {
+  float: none;
+  text-align: center;
+}
+.contact .contactlinks .socialmedia {
+  width: 15%;
+  float: right;
+  text-align: right;
+}
+.contact .contactlinks .socialmedia a {
+  transition: 0.3s;
+}
+.contact .contactlinks .socialmedia a:hover {
+  transform: scale(1.5);
+}
+
+@media only screen and (max-width: 1010px) {
+  main.contact {
+    width: 72%;
+  }
+}
+@media only screen and (max-width: 970px) {
+  main.contact #contactForm {
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 890px) {
+  main.contact #contactForm input[type=submit] {
+    margin-bottom: 30px;
+  }
+  main.contact .contactlinks a {
+    display: block;
+    float: unset;
+  }
+  main.contact .contactlinks .tel, main.contact .contactlinks.mail {
+    width: 100%;
+  }
+  main.contact .contactlinks .socialmedia {
+    width: 100%;
+    float: unset;
+    text-align: center;
+  }
+  main.contact .contactlinks .socialmedia a {
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 770px) {
+  main.contact #contactForm {
+    padding: 20px 0 10px 0;
+  }
+  main.contact #contactForm label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  main.contact #contactForm input,
+main.contact #contactForm textarea {
+    width: 60%;
+    margin: auto auto 20px auto !important;
+    display: block;
+  }
+  main.contact #contactForm input[type=submit] {
+    display: block;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .contact#main {
+    margin: auto;
+    display: block;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .contact#main {
+    width: 90%;
+  }
+  .contact#main #contactForm input[type=email], .contact#main #contactForm textarea {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  main.contact #contactForm input[type=submit] {
+    width: 40%;
+  }
+}
+.bestemmingen .image-slideshow button, .bestemmingen .image-slideshow .bekijk-meer a {
+  font-size: 41px;
+  position: fixed;
+  top: 19vh;
+  right: 5vw;
+  background-color: rgba(21, 21, 23, 0.95);
+  border: solid 2px rgba(21, 21, 23, 0.95);
+  transition: 0.6s ease;
+  border-radius: 3px 3px 3px 3px;
+  padding-bottom: 5px;
+}
+.bestemmingen .image-slideshow button:hover, .bestemmingen .image-slideshow .bekijk-meer a:hover {
+  color: rgba(21, 21, 23, 0.95);
+  background-color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.image-slideshow {
+  display: none;
+  text-align: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.image-slideshow .slider-images {
+  display: flex;
+  width: 80vw;
+  height: 65vh;
+  margin: auto;
+}
+.image-slideshow .slider-images .inactive {
+  display: none;
+}
+.image-slideshow .slider-images .inactive img {
+  cursor: pointer;
+}
+.image-slideshow .slider-images .inactive p {
+  margin-block-start: 0;
+  position: fixed;
+  top: 81vh;
+  color: white;
+  text-align: center;
+  float: unset;
+  left: 10vw;
+  right: 10vw;
+}
+.image-slideshow .slider-images .active {
+  display: block;
+  margin: auto;
+}
+.image-slideshow .prev, .image-slideshow .next {
+  cursor: pointer;
+  width: auto;
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 3px 3px 3px 3px;
+  user-select: none;
+  position: fixed;
+  top: calc(46% - 25px);
+  display: inline-block;
+  vertical-align: top;
+  border: solid 2px rgba(21, 21, 23, 0.95);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-right: 10px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+.image-slideshow .prev:hover, .image-slideshow .next:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: rgba(21, 21, 23, 0.95);
+}
+.image-slideshow .next {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  right: 5vw;
+}
+.image-slideshow .prev {
+  left: 5vw;
+}
+.image-slideshow img {
+  max-width: 80vw;
+  max-height: 60vh;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.bestemmingen {
+  display: block;
+  padding-left: 20px;
+  width: auto;
+}
+.bestemmingen h2, .bestemmingen .form-button {
+  margin-left: 2.5%;
+}
+.bestemmingen button {
+  background-color: #1e6eb9;
+  border-color: #1e6eb9;
+}
+.bestemmingen .bestemming-single {
+  margin: 15px auto;
+  border-bottom: white solid 2px;
+  padding: 10px 0;
+}
+.bestemmingen .bestemming-single:last-child {
+  border-bottom: none;
+}
+.bestemmingen .bestemming-single .bestemming-img-caption {
+  width: 18%;
+  display: inline-block;
+  text-align: center;
+  min-width: 180px;
+}
+.bestemmingen .bestemming-single .bestemming-img-caption img {
+  height: 180px;
+  width: 180px;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+.bestemmingen .bestemming-single .bestemming-img-caption figcaption {
+  text-align: center;
+}
+.bestemmingen .bestemming-single .bestemming-text {
+  width: 69%;
+  margin-left: 3%;
+  display: inline-block;
+  text-align: justify;
+  vertical-align: top;
+}
+.bestemmingen .bestemming-single .bestemming-text p {
+  margin-top: 18px;
+}
+.bestemmingen .bestemming-single .bestemming-text p .inschrijven-destination {
+  float: unset;
+  display: inline-block;
+}
+.bestemmingen .bestemming-single .bestemming-text p .bekijk-meer {
+  float: left;
+  display: flex;
+}
+.bestemmingen .bestemming-single .bestemming-text p .bekijk-meer button {
+  margin: 10px 10px 0 0;
+}
+.bestemmingen .bestemming-single .bestemming-text p .delete-destination, .bestemmingen .bestemming-single .bestemming-text p .update-destination {
+  float: right;
+}
+.bestemmingen .bestemming-single .bestemming-text p .bestemming-price, .bestemmingen .bestemming-single .bestemming-text p .taxes {
+  text-align: left;
+  display: block;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+.bestemmingen .bestemming-single .bestemming-text p .bestemming-price {
+  margin-top: 1em;
+}
+.bestemmingen .bestemming-single .bestemming-text p .taxes {
+  font-size: 0.9em;
+  line-height: 0.9em;
+  margin-top: 0.3em;
+  margin-bottom: 0.6em;
+}
+.bestemmingen .bestemming-single .update-delete-button {
+  margin: 10px 5px 0 5px;
+}
+.bestemmingen #popupForm {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-left: 2.5%;
+  border-bottom: 3px #fff dashed;
+}
+.bestemmingen #popupForm h2 {
+  margin-left: 0;
+}
+.bestemmingen #popupForm .bestemmingForm-section {
+  float: left;
+  width: 100%;
+}
+.bestemmingen #popupForm .bestemmingForm-section label {
+  min-width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+.bestemmingen #popupForm .bestemmingForm-section input[type=text], .bestemmingen #popupForm .bestemmingForm-section textarea {
+  width: 50%;
+}
+.bestemmingen #popupForm .bestemmingForm-section input[type=text], .bestemmingen #popupForm .bestemmingForm-section input[type=date], .bestemmingen #popupForm .bestemmingForm-section input[type=file], .bestemmingen #popupForm .bestemmingForm-section input[type=number], .bestemmingen #popupForm .bestemmingForm-section textarea {
+  margin-bottom: 10px;
+}
+.bestemmingen #popupForm .bestemmingForm-section input[type=date], .bestemmingen #popupForm .bestemmingForm-section input[type=number] {
+  width: 150px;
+}
+.bestemmingen #popupForm .bestemmingForm-section .bestemming-info label {
+  vertical-align: top;
+}
+.bestemmingen #popupForm .bestemmingForm-section .bestemming-price-left, .bestemmingen #popupForm .bestemmingForm-section .bestemming-price-right {
+  width: 50%;
+}
+.bestemmingen #popupForm .bestemmingForm-section.bestemming-price .bestemming-price-left {
+  float: left;
+}
+.bestemmingen #popupForm .bestemmingForm-section.bestemming-price .bestemming-price-right {
+  float: right;
+}
+.bestemmingen #popupForm .bestemmingForm-section.bestemming-price input::-webkit-outer-spin-button,
+.bestemmingen #popupForm .bestemmingForm-section.bestemming-price input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.bestemmingen #popupForm .bestemmingForm-section.bestemming-price input[type=number] {
+  -moz-appearance: textfield;
+}
+.bestemmingen #popupForm .bestemmingForm-section .bestemming-submit-cancel {
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 1010px) {
+  #bestemmingen .bestemmingen {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 970px) {
+  main.bestemmingen {
+    padding-left: 0;
+    width: 90%;
+  }
+  main.bestemmingen h2, main.bestemmingen .form-button {
+    margin-left: 0;
+  }
+  main.bestemmingen #popupForm {
+    margin-left: 0;
+  }
+  main.bestemmingen .bestemming-single .bestemming-text {
+    margin-left: 0;
+  }
+  main.bestemmingen .bestemming-single .bestemming-text p {
+    width: 90%;
+    margin: 18px auto auto auto;
+  }
+  main.bestemmingen .bestemming-single .bestemming-img-caption {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #bestemmingen .bestemmingen {
+    width: 85%;
+  }
+
+  .bestemmingen #popupForm .bestemmingForm-section label {
+    display: block;
+  }
+  .bestemmingen #popupForm .bestemmingForm-section input[type=text], .bestemmingen #popupForm .bestemmingForm-section textarea {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  #bestemmingen .bestemmingen {
+    width: 90%;
+  }
+
+  .bestemmingen .bestemming-single .bestemming-text {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .bestemmingen .bestemming-single .bestemming-img-caption {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+  .bestemmingen .bestemming-single .bestemming-img-caption img {
+    height: auto;
+    width: 80%;
+  }
+  .bestemmingen .bestemming-single .bestemming-text {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .bestemmingen #popupForm .bestemmingForm-section input[type=text], .bestemmingen #popupForm .bestemmingForm-section textarea {
+    width: 100%;
+  }
+
+  .bestemmingen .bestemming-single .bestemming-img-caption img {
+    width: 90%;
+  }
+}
+.inschrijven .form-business {
+  display: none;
+}
+.inschrijven .form-business .formblock-business {
+  width: 48%;
+  margin-bottom: 10px;
+}
+.inschrijven .form-business .formblock-business:nth-child(odd) {
+  float: left;
+}
+.inschrijven .form-business .formblock-business:nth-child(even) {
+  float: right;
+}
+.inschrijven .form-business .formblock-business input {
+  float: right;
+}
+.inschrijven h2 {
+  margin-block-start: 0;
+  font-size: 20px;
+  text-align: justify;
+  margin-block-end: 1em;
+  font-weight: bold;
+  color: #1e6eb9;
+}
+.inschrijven h3 {
+  margin-block-start: 0;
+}
+.inschrijven .form-intro-text a {
+  color: #1e6eb9;
+}
+.inschrijven .destinations-sidebar .bestemming-single-sidebar {
+  width: 45%;
+  display: inline-block;
+  margin: 0 2.5% 30px 2.5%;
+  text-align: center;
+}
+.inschrijven .destinations-sidebar .bestemming-single-sidebar img {
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+}
+.inschrijven .destinations-sidebar .bestemming-single-sidebar h2 {
+  text-align: center;
+  margin-block-end: 0;
+}
+.inschrijven .destinations-sidebar .bestemming-single-sidebar figcaption {
+  margin-bottom: 15px;
+}
+.inschrijven form .form-about {
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+.inschrijven form .form-about div {
+  width: 48%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.inschrijven form .form-about div:nth-child(even) {
+  float: left;
+}
+.inschrijven form .form-about div:nth-child(even) input {
+  float: right;
+  width: 38%;
+}
+.inschrijven form .form-about div:nth-child(odd) {
+  float: right;
+}
+.inschrijven form .form-about div:nth-child(odd) input {
+  float: right;
+  width: 38%;
+}
+.inschrijven form .form-business .formblock-business input {
+  width: 38%;
+}
+.inschrijven form .form-business {
+  margin-top: 20px;
+}
+.inschrijven form .form-ship {
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: auto;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+.inschrijven form .form-ship .basic-ship-info, .inschrijven form .form-ship .detailed-ship-info {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.inschrijven form .form-ship .basic-ship-info .formblock-ship, .inschrijven form .form-ship .detailed-ship-info .formblock-ship {
+  width: 48%;
+  margin-bottom: 10px;
+}
+.inschrijven form .form-ship .basic-ship-info .formblock-ship:nth-child(odd), .inschrijven form .form-ship .detailed-ship-info .formblock-ship:nth-child(odd) {
+  float: left;
+}
+.inschrijven form .form-ship .basic-ship-info .formblock-ship:nth-child(odd) input, .inschrijven form .form-ship .basic-ship-info .formblock-ship:nth-child(odd) select, .inschrijven form .form-ship .detailed-ship-info .formblock-ship:nth-child(odd) input, .inschrijven form .form-ship .detailed-ship-info .formblock-ship:nth-child(odd) select {
+  float: right;
+  width: 38%;
+}
+.inschrijven form .form-ship .basic-ship-info .formblock-ship:nth-child(even), .inschrijven form .form-ship .detailed-ship-info .formblock-ship:nth-child(even) {
+  float: right;
+}
+.inschrijven form .form-ship .basic-ship-info .formblock-ship:nth-child(even) input, .inschrijven form .form-ship .basic-ship-info .formblock-ship:nth-child(even) select, .inschrijven form .form-ship .detailed-ship-info .formblock-ship:nth-child(even) input, .inschrijven form .form-ship .detailed-ship-info .formblock-ship:nth-child(even) select {
+  float: right;
+  width: 38%;
+}
+.inschrijven form .form-ship .basic-ship-info:nth-child(odd), .inschrijven form .form-ship .detailed-ship-info:nth-child(odd) {
+  float: right;
+}
+.inschrijven form .form-ship .basic-ship-info:nth-child(odd) input, .inschrijven form .form-ship .basic-ship-info:nth-child(odd) select, .inschrijven form .form-ship .detailed-ship-info:nth-child(odd) input, .inschrijven form .form-ship .detailed-ship-info:nth-child(odd) select {
+  float: right;
+  width: 38%;
+}
+.inschrijven form .form-ship .basic-ship-info:nth-child(even), .inschrijven form .form-ship .detailed-ship-info:nth-child(even) {
+  float: left;
+}
+.inschrijven form .form-ship .basic-ship-info:nth-child(even) input, .inschrijven form .form-ship .basic-ship-info:nth-child(even) select, .inschrijven form .form-ship .detailed-ship-info:nth-child(even) input, .inschrijven form .form-ship .detailed-ship-info:nth-child(even) select {
+  float: right;
+  width: 38%;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width {
+  margin-bottom: 15px;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width .inputs input {
+  width: 50px;
+  float: unset;
+  margin-bottom: 5px;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width:nth-child(even) {
+  float: left;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width:nth-child(odd) {
+  float: right;
+}
+.inschrijven form .form-ship .afmetingen-schip .boven-water-schip {
+  margin-bottom: 30px;
+}
+.inschrijven form .form-ship .detailed-ship-info .form-half-width .inputs {
+  text-align: right;
+  display: block;
+  width: 144px;
+  float: right;
+}
+.inschrijven form .form-ship .detailed-ship-info .form-half-width .inputs input {
+  width: 50px;
+  float: unset;
+  margin-bottom: 5px;
+  margin-right: 4px;
+}
+.inschrijven form .form-ship .detailed-ship-info .form-half-width .inputs input:last-child {
+  margin-right: 0;
+}
+.inschrijven form .form-remarks label {
+  display: block;
+  margin-bottom: 10px;
+}
+.inschrijven form .form-remarks textarea {
+  width: 100%;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+.inschrijven form .form-date label {
+  display: block;
+  margin-bottom: 10px;
+}
+.inschrijven form .form-date input {
+  margin-bottom: 20px;
+}
+.inschrijven form .form-ship .afmetingen-schip {
+  width: 100%;
+  display: block;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width {
+  width: 48%;
+  text-align: left;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width label {
+  float: left;
+  display: inline-block;
+  width: auto;
+  text-align: left;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width input {
+  float: unset;
+  margin-right: 4px;
+  width: 100px;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width .inputs {
+  text-align: right;
+  display: block;
+  width: 144px;
+  float: right;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width .inputs input:last-child {
+  margin-right: 0;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width .inputs span {
+  width: auto;
+  display: inline-block;
+  text-align: left;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width:nth-child(even) {
+  float: left;
+  margin-left: 0;
+}
+.inschrijven form .form-ship .afmetingen-schip .form-half-width:nth-child(odd) {
+  float: right;
+  margin-right: 0;
+}
+.inschrijven .captcha-img {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.inschrijven .captcha-img svg {
+  vertical-align: top;
+  height: calc(100% - (1.5em / 2));
+  margin-left: 10px;
+  color: #1e6eb9;
+  width: 1.5em;
+  margin-top: calc((50px - 24px) / 2);
+}
+.inschrijven .captcha-img svg:hover {
+  cursor: pointer;
+}
+.inschrijven .kvk-business {
+  /* Firefox */
+}
+.inschrijven .kvk-business input::-webkit-outer-spin-button,
+.inschrijven .kvk-business input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.inschrijven .kvk-business input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media only screen and (max-width: 1500px) {
+  .inschrijven form .form-ship .formblock-ship:nth-child(even) input, .inschrijven form .form-ship .formblock-ship:nth-child(even) select {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 1420px) {
+  .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width {
+    width: 66%;
+    float: left;
+  }
+  .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs {
+    width: 220px;
+  }
+  .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs input {
+    width: 80px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width {
+    width: 75%;
+  }
+
+  .inschrijven form .form-about .formblock-about input:nth-child(even), .inschrijven form .form-about .formblock-about select:nth-child(even), .inschrijven form .form-about .formblock-ship input:nth-child(even), .inschrijven form .form-about .formblock-ship select:nth-child(even), .inschrijven form .form-ship .formblock-about input:nth-child(even), .inschrijven form .form-ship .formblock-about select:nth-child(even), .inschrijven form .form-ship .formblock-ship input:nth-child(even), .inschrijven form .form-ship .formblock-ship select:nth-child(even) {
+    width: 38%;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .inschrijven .destinations-sidebar .bestemming-single-sidebar img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width {
+    width: 85%;
+  }
+
+  .inschrijven form .formblock-about {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1010px) {
+  main.inschrijven {
+    width: 72%;
+  }
+
+  .inschrijven .destinations-sidebar .bestemming-single-sidebar img {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 910px) {
+  .inschrijven .destinations-sidebar .bestemming-single-sidebar img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width {
+    width: 100%;
+  }
+
+  .inschrijven .destinations-sidebar .bestemming-single-sidebar img {
+    width: 230px;
+    height: 230px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  main.inschrijven {
+    width: 90%;
+    margin: auto;
+    display: block;
+  }
+  main.inschrijven .destinations-sidebar {
+    display: none;
+  }
+  main.inschrijven .formblock-submit {
+    margin-bottom: 30px;
+  }
+
+  .inschrijven-bottom-sidebar .bestemming-single-sidebar {
+    text-align: center;
+    width: 45%;
+    margin-bottom: 30px;
+  }
+  .inschrijven-bottom-sidebar .bestemming-single-sidebar .destination-sidebar-img {
+    height: 250px;
+    width: 250px;
+  }
+  .inschrijven-bottom-sidebar .bestemming-single-sidebar .destination-sidebar-date {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .inschrijven form .form-ship .detailed-ship-info .formblock-ship {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .inschrijven form .form-ship .basic-ship-info .formblock-ship {
+    width: 100%;
+  }
+
+  .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs {
+    width: 190px;
+  }
+
+  main.inschrijven form .form-intro-text, main.inschrijven form .form-about, main.inschrijven form .form-ship, main.inschrijven form .form-remarks, main.inschrijven form .form-date, main.inschrijven form .formblock-submit, main.inschrijven form .form-business .formblock-business {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  main.inschrijven form .form-intro-text .formblock-about, main.inschrijven form .form-intro-text .formblock-ship, main.inschrijven form .form-about .formblock-about, main.inschrijven form .form-about .formblock-ship, main.inschrijven form .form-ship .formblock-about, main.inschrijven form .form-ship .formblock-ship, main.inschrijven form .form-remarks .formblock-about, main.inschrijven form .form-remarks .formblock-ship, main.inschrijven form .form-date .formblock-about, main.inschrijven form .form-date .formblock-ship, main.inschrijven form .formblock-submit .formblock-about, main.inschrijven form .formblock-submit .formblock-ship, main.inschrijven form .form-business .formblock-business .formblock-about, main.inschrijven form .form-business .formblock-business .formblock-ship {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .inschrijven-bottom-sidebar .bestemming-single-sidebar .destination-sidebar-img {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .inschrijven {
+    width: 90%;
+  }
+  .inschrijven #inschrijfform {
+    padding: 30px 0;
+  }
+
+  .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs {
+    width: 140px;
+  }
+  .inschrijven form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs input {
+    width: 60px;
+  }
+
+  .inschrijven-bottom-sidebar .bestemming-single-sidebar .destination-sidebar-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  main.inschrijven {
+    width: 100%;
+  }
+  main.inschrijven h3 {
+    margin-left: 10px;
+  }
+}
+/*
+Form-block: destination, date, departure-place: made the input bigger
+Form-block: about owner & the boat: put the inputs on their own line
+ */
+@media only screen and (max-width: 440px) {
+  .zakelijk-particulier {
+    text-align: center;
+  }
+
+  .inschrijven#main form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs,
+.inschrijven#main form .form-ship .detailed-ship-info .formblock-ship.form-half-width .inputs {
+    width: 100%;
+    display: inline;
+    text-align: center;
+  }
+  .inschrijven#main form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs input,
+.inschrijven#main form .form-ship .detailed-ship-info .formblock-ship.form-half-width .inputs input {
+    width: 100px;
+    display: inline-block;
+  }
+  .inschrijven#main form .form-ship .afmetingen-schip .formblock-ship.form-half-width .inputs input:first-child,
+.inschrijven#main form .form-ship .detailed-ship-info .formblock-ship.form-half-width .inputs input:first-child {
+    margin-right: 2px;
+  }
+
+  .inschrijven #inschrijfform {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .inschrijven #inschrijfform h4, .inschrijven #inschrijfform h5 {
+    text-align: center;
+  }
+
+  .inschrijven#main .form-about .formblock-about label, .inschrijven#main .form-about .formblock-about input, .inschrijven#main .form-about .formblock-about select, .inschrijven#main .form-about .formblock-ship label, .inschrijven#main .form-about .formblock-ship input, .inschrijven#main .form-about .formblock-ship select, .inschrijven#main .form-ship .formblock-about label, .inschrijven#main .form-ship .formblock-about input, .inschrijven#main .form-ship .formblock-about select, .inschrijven#main .form-ship .formblock-ship label, .inschrijven#main .form-ship .formblock-ship input, .inschrijven#main .form-ship .formblock-ship select, .inschrijven#main .form-remarks .formblock-about label, .inschrijven#main .form-remarks .formblock-about input, .inschrijven#main .form-remarks .formblock-about select, .inschrijven#main .form-remarks .formblock-ship label, .inschrijven#main .form-remarks .formblock-ship input, .inschrijven#main .form-remarks .formblock-ship select {
+    float: unset;
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+  .inschrijven#main .form-about .formblock-about label, .inschrijven#main .form-about .formblock-ship label, .inschrijven#main .form-ship .formblock-about label, .inschrijven#main .form-ship .formblock-ship label, .inschrijven#main .form-remarks .formblock-about label, .inschrijven#main .form-remarks .formblock-ship label {
+    width: 100%;
+    margin-bottom: 3px;
+  }
+  .inschrijven#main .form-about .formblock-about input, .inschrijven#main .form-about .formblock-about select, .inschrijven#main .form-about .formblock-ship input, .inschrijven#main .form-about .formblock-ship select, .inschrijven#main .form-ship .formblock-about input, .inschrijven#main .form-ship .formblock-about select, .inschrijven#main .form-ship .formblock-ship input, .inschrijven#main .form-ship .formblock-ship select, .inschrijven#main .form-remarks .formblock-about input, .inschrijven#main .form-remarks .formblock-about select, .inschrijven#main .form-remarks .formblock-ship input, .inschrijven#main .form-remarks .formblock-ship select {
+    width: 60%;
+  }
+
+  .inschrijven-bottom-sidebar .bestemming-single-sidebar {
+    width: 90%;
+  }
+  .inschrijven-bottom-sidebar .bestemming-single-sidebar .destination-sidebar-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .inschrijven form .form-business .formblock-business label {
+    width: 100%;
+    margin-bottom: 3px;
+    display: block;
+    text-align: center;
+  }
+  .inschrijven form .form-business .formblock-business input {
+    width: 60%;
+    float: unset;
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .inschrijven-bottom-sidebar .bestemming-single-sidebar .destination-sidebar-img {
+    width: 220px;
+    height: 220px;
+  }
+}
+.news-form-section {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+.news-form-section label {
+  width: 30%;
+  display: inline-block;
+}
+.news-form-section input {
+  width: 60%;
+}
+.news-form-section input[type=submit], .news-form-section input[type=button] {
+  width: 100px;
+}
+
+.news-all {
+  display: inline-block;
+  width: 100%;
+}
+.news-all .news-single h2 {
+  width: 48%;
+  display: inline-block;
+  font-size: 20px;
+  text-align: justify;
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+  font-weight: bold;
+  color: #1e6eb9;
+}
+.news-all .news-single .news-text p {
+  max-width: 100%;
+  word-break: break-word;
+}
+.news-all .news-single .news-text img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.news-all .news-single .edit-delete-buttons {
+  float: right;
+  width: 50%;
+  text-align: right;
+  margin-top: 1.5em;
+}
+.news-all .news-single .edit-delete-buttons a:first-child {
+  margin-right: 1em;
+}
+.news-all .news-single:not(:first-child) {
+  border-top: 2px solid #1e6eb9;
+  margin-top: 48px;
+  padding-top: 18px;
+}
+.news-all .news-single .main-image-news img {
+  width: 100%;
+}
+.news-all .news-single .news-image-gallery .single-image {
+  width: 32%;
+  display: inline-block;
+  margin-left: calc((100% - 96%)/4);
+  margin-right: calc((100% - 96%)/4);
+}
+.news-all .news-single .news-image-gallery .single-image img {
+  width: 100%;
+  cursor: pointer;
+}
+.news-all .news-single .news-image-gallery .single-image:nth-child(3n+1) {
+  margin-left: 0;
+}
+.news-all .news-single .news-image-gallery .single-image:nth-child(3n) {
+  margin-right: 0;
+}
+.news-all .news-single:first-child h2 {
+  margin-block-start: 0;
+}
+
+.buitenland img {
+  max-width: 100%;
+}
+.buitenland button {
+  padding: 12px 31px;
+  font-size: 0.9em;
+}
+.buitenland a {
+  color: #00a0dc;
+}
+.buitenland a:hover {
+  text-decoration: underline;
+}
+.buitenland h2 {
+  font-size: 20px;
+  text-align: justify;
+  margin-block-end: 0.5em;
+  margin-block-start: 1em;
+  font-weight: bold;
+  color: #1e6eb9;
+}
+.buitenland h3 {
+  text-align: center;
+}
+.buitenland .full, .buitenland .width-3-4, .buitenland .quarter, .buitenland .half, .buitenland .width-2-3, .buitenland .third {
+  display: inline-block;
+}
+.buitenland .full {
+  margin-bottom: 25px;
+}
+.buitenland .full .right {
+  float: right;
+}
+.buitenland .full p {
+  margin-block-start: 0;
+}
+.buitenland .width-3-4 {
+  width: 70%;
+}
+.buitenland .width-2-3 {
+  width: 60%;
+}
+.buitenland .third {
+  width: 30%;
+}
+.buitenland .quarter {
+  width: 24%;
+}
+.buitenland .half {
+  width: 48%;
+}
+.buitenland .download-link, .buitenland .andere-downloads {
+  text-align: center;
+}
+.buitenland .eigendomsbewijs-img {
+  display: block;
+  margin: 30px auto auto auto;
+}
+
+@media only screen and (min-width: 1401px) {
+  .small-vaarregels, .small-schip, .small-icp {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .large-vaarregels, .large-schip, .large-icp {
+    display: none;
+  }
+
+  .small-icp {
+    margin-left: calc(30% + 10%);
+  }
+}
+@media only screen and (min-width: 1230px) {
+  .small-rijn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1230px) {
+  .large-rijn {
+    display: none;
+  }
+
+  .small-rijn {
+    margin-left: calc(24% + 6%);
+  }
+}
+@media only screen and (max-width: 1010px) {
+  .buitenland h2 {
+    right: 15%;
+  }
+}
+@media only screen and (max-width: 970px) {
+  main.buitenland {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .buitenland h2 {
+    left: 15%;
+    position: unset;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .buitenland img.eigendomsbewijs-img {
+    max-width: 90vw;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .buitenland .full, .buitenland .width-3-4, .buitenland .quarter, .buitenland .half, .buitenland .width-2-3, .buitenland .third {
+    width: 100%;
+  }
+  .buitenland .full h2 {
+    margin-left: 0;
+  }
+  .buitenland img {
+    margin: auto;
+    display: block;
+  }
+  .buitenland .btn {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .buitenland h2 {
+    top: 10%;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .buitenland button {
+    padding: 12px 17px;
+  }
+}
+#main.login {
+  width: 100%;
+}
+#main.login .logout {
+  position: absolute;
+  left: calc(50% - 35px);
+  right: calc(50% - 35px);
+  width: 70px;
+}
+#main.login h2 {
+  color: #1e6eb9;
+  text-align: center;
+}
+#main.login .login-form {
+  background-color: #888;
+  width: 40%;
+  border: 1px solid rgba(21, 21, 23, 0.95);
+  border-radius: 8px;
+  margin: auto;
+  display: block;
+  padding: 40px 20px;
+}
+#main.login .login-form label, #main.login .login-form input {
+  display: block;
+  margin: auto;
+}
+#main.login .login-form label {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  color: #fff;
+}
+#main.login .login-form input {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  width: 80%;
+}
+
+@media only screen and (max-width: 1300px) {
+  #main.login .login-form {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  #main.login .login-form {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #main.login .login-form {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  main.login .login-form {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  main.login .login-form {
+    width: 90%;
+  }
+  main.login .login-form input {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main.login .login-form {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .login .login-form input {
+    width: 90%;
+  }
+}
+.meer-info h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  width: 50%;
+  display: inline-block;
+  color: #1e6eb9;
+}
+.meer-info .inschrijf-btn {
+  float: right;
+}
+.meer-info .departure-date {
+  margin-block-start: 3px;
+  margin-block-end: 2em;
+  font-size: 0.9em;
+}
+.meer-info .destinations-sidebar .bestemming-single-sidebar {
+  width: 30%;
+  display: inline-block;
+  margin: 0 1.66666% 0 1.66666%;
+}
+.meer-info .destinations-sidebar .bestemming-single-sidebar img {
+  width: 100%;
+  object-fit: cover;
+  height: 149px;
+}
+.meer-info .info-main-img {
+  width: 49%;
+  display: inline-block;
+  margin-right: 1%;
+}
+.meer-info .info-main-img img {
+  width: 100%;
+}
+.meer-info .prices {
+  width: 49%;
+  display: inline-block;
+  float: right;
+}
+.meer-info .prices table {
+  width: 100%;
+}
+.meer-info .prices table th, .meer-info .prices table td {
+  width: 50%;
+  text-align: left;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+.meer-info .info-lang {
+  display: flex;
+  width: 100%;
+}
+.meer-info .gallery {
+  width: 100%;
+}
+.meer-info .gallery img {
+  width: 30%;
+  display: inline-block;
+  margin: calc(10%/4);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+  .meer-info .info-main-img, .meer-info .prices {
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
+  .meer-info .info-main-img img, .meer-info .prices img {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .meer-info .gallery img:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  .meer-info .gallery img:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 550px) {
+  .meer-info .gallery img {
+    width: 46%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .meer-info .gallery img:nth-child(odd) {
+    margin-left: 0;
+  }
+  .meer-info .gallery img:nth-child(even) {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .meer-info .info-main-img, .meer-info .prices {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .meer-info .info-main-img, .meer-info .prices {
+    width: 100%;
+  }
+  .meer-info .gallery img {
+    width: 90%;
+    display: block;
+    margin: 30px auto;
+  }
+}
+.alg-vw, .privacy {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+.alg-vw a, .alg-vw h2, .privacy a, .privacy h2 {
+  color: #1e6eb9;
+}
+.alg-vw .title-button h2, .alg-vw .title-button a, .privacy .title-button h2, .privacy .title-button a {
+  width: 50%;
+  display: inline-block;
+  margin-block-start: 20px;
+  margin-block-end: 20px;
+}
+.alg-vw .title-button a, .privacy .title-button a {
+  float: right;
+  text-align: right;
+}
+.alg-vw .title-button a button, .privacy .title-button a button {
+  height: 34.4px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .privacy .title-button h2, .privacy .title-button a {
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin: 10px 0 10px 0;
+  }
+  .privacy .title-button a {
+    margin: 10px 0 20px 0;
+  }
+}
+.trips .popup-form .formblock-wide {
+  width: 48%;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.trips .popup-form .formblock-wide:nth-child(1) {
+  float: right;
+}
+.trips .popup-form .formblock-wide.block-destination, .trips .popup-form .formblock-wide.block-price {
+  margin-left: 2%;
+}
+.trips .popup-form .formblock-wide label {
+  min-width: 40%;
+  display: inline-block;
+}
+.trips .popup-form .formblock-wide input[type=text], .trips .popup-form .formblock-wide input[type=date], .trips .popup-form .formblock-wide input[type=number] {
+  min-width: 50%;
+  float: right;
+}
+.trips .popup-form .formblock-wide input[type=date] {
+  padding-left: 4px;
+}
+.trips .popup-form .formblock-textarea {
+  width: 98.5%;
+}
+.trips .popup-form .formblock-textarea label {
+  vertical-align: top;
+  min-width: 22.5%;
+  display: inline-block;
+}
+.trips .popup-form .formblock-textarea textarea {
+  width: 75.7%;
+}
+
+main.boten .popup-form #boatForm {
+  display: none;
+}
+
+.boten form {
+  padding: 30px;
+  width: 90%;
+}
+.boten form .formblock-wide {
+  display: flex;
+  margin-bottom: 10px;
+  width: 70%;
+}
+.boten form .formblock-wide label {
+  width: 36.8%;
+}
+.boten form .formblock-wide input {
+  border-radius: 3px;
+  width: 50%;
+  float: right;
+}
+.boten form .formblock-medium .form-half-md {
+  display: inline-block;
+  width: 50%;
+}
+.boten form .formblock-medium .form-half-md:last-child {
+  float: right;
+}
+.boten form .formblock-medium .form-half-md:last-child label {
+  margin-left: 2%;
+}
+.boten form .formblock-medium .form-half-md:first-child input {
+  margin-right: 2%;
+}
+.boten form .formblock-medium .form-half-md .half-md-section {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.boten form .formblock-medium .form-half-md .half-md-section label, .boten form .formblock-medium .form-half-md .half-md-section input {
+  display: inline-block;
+}
+.boten form .formblock-medium .form-half-md .half-md-section label {
+  width: 50%;
+}
+.boten form .formblock-medium .form-half-md .half-md-section input {
+  width: 44%;
+  float: right;
+}
+.boten form .formblock-submit input[type=submit] {
+  float: left;
+}
+.boten form .formblock-submit input[type=button] {
+  float: right;
+}
+
+.boat-table {
+  width: 100%;
+  text-align: center;
+}
+
+.reviews .popup-form #popupForm .reviewForm-section {
+  margin-bottom: 10px;
+}
+.reviews .popup-form #popupForm .reviewForm-section div input {
+  width: 50%;
+  float: right;
+  margin-right: 2%;
+}
+.reviews .popup-form #popupForm .reviewForm-section .commentaarlabel {
+  display: block;
+  margin-bottom: 10px;
+}
+.reviews .popup-form #popupForm .reviewForm-section textarea {
+  min-width: 70%;
+}
+.reviews .popup-form #popupForm .reviewForm-section .review-naam, .reviews .popup-form #popupForm .reviewForm-section .review-rating {
+  width: 50%;
+  display: inline-block;
+}
+.reviews .popup-form #popupForm .reviewForm-section .review-naam:last-child, .reviews .popup-form #popupForm .reviewForm-section .review-rating:last-child {
+  float: right;
+}
+.reviews .popup-form #popupForm .reviewForm-section .review-rating label {
+  margin-left: 2%;
+}
+.reviews .popup-form #popupForm .reviewForm-section .review-rating select {
+  width: 100px;
+  font-size: 1.05em;
+}
+
+.review-table {
+  width: 100%;
+}
+.review-table tr {
+  font-style: italic;
+  width: 100%;
+  display: inline-block;
+  margin: 10px auto;
+  padding: 8px;
+  border: 3px solid #00a0dc;
+  border-radius: 8px;
+}
+.review-table tr td {
+  text-align: justify;
+}
+.review-table tr td a {
+  margin-right: 10px;
+}
+.review-table tr td button {
+  margin-top: 10px;
+}
+.review-table .review-comment {
+  font-style: normal;
+}
+.review-table a {
+  text-align: center;
+}
+
+@-moz-document url-prefix() {
+  .reviews .old-reviews .review-table .review-single .review-comment {
+    margin-bottom: 0 !important;
+  }
+}
+@media only screen and (max-width: 1380px) {
+  .review-table .review-single {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .review-table .review-single {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1010px) {
+  main.reviews {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .review-table .review-single {
+    width: 95%;
+  }
+
+  .reviews .popup-form #popupForm .reviewForm-section textarea {
+    min-width: 80%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  main.reviews {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 580px) {
+  main.reviews {
+    width: 90%;
+  }
+  main.reviews .popup-form {
+    margin-left: 20px;
+  }
+  main.reviews .popup-form #popupForm .reviewForm-section textarea {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .reviews .popup-form #popupForm .reviewForm-section .review-naam, .reviews .popup-form #popupForm .reviewForm-section .review-rating {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .reviews .popup-form #popupForm .reviewForm-section .review-naam label, .reviews .popup-form #popupForm .reviewForm-section .review-rating label {
+    margin-left: 0;
+  }
+  .reviews .popup-form #popupForm .reviewForm-section .review-naam input, .reviews .popup-form #popupForm .reviewForm-section .review-rating input {
+    margin-right: 0;
+  }
+  .reviews .popup-form #popupForm .reviewForm-section .review-naam select, .reviews .popup-form #popupForm .reviewForm-section .review-rating select {
+    float: right;
+  }
+}
+.edit-review-form {
+  width: 70%;
+  margin: 30px auto auto auto;
+  padding: 20px;
+}
+.edit-review-form .edit-review-name input,
+.edit-review-form .edit-review-comment textarea {
+  min-width: 60%;
+}
+.edit-review-form .edit-review-rating select {
+  width: 50px;
+}
+.edit-review-form .edit-review-comment label {
+  vertical-align: top;
+}
+.edit-review-form .edit-review-comment textarea {
+  resize: vertical;
+}
+.edit-review-form .edit-review-buttons input[type=submit] {
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .edit-review-form div label {
+    display: block !important;
+  }
+  .edit-review-form div input, .edit-review-form div textarea, .edit-review-form div select {
+    margin-left: 20px;
+  }
+  .edit-review-form div input[type=text], .edit-review-form div textarea {
+    width: 100%;
+  }
+}
+html, body, .main-area, .main-no-footer, .nav-outside, .banner, #navbar, .footer-outside, #footer, .bottom-sidebar-mobile {
+  max-width: 100vw !important;
+}
+
+html, body, .main-area, .main-no-footer, .nav-outside, .banner, .footer-outside, #footer, .bottom-sidebar-mobile {
+  overflow-x: hidden;
+}
+
+a {
+  color: #1e6eb9;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background: #fff;
+  margin: 0;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: rgba(21, 21, 23, 0.95);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+body main {
+  width: 58%;
+  display: inline-block;
+}
+body h2 {
+  font-size: 20px;
+}
+body h3 {
+  color: #1e6eb9;
+}
+body a {
+  color: #fff;
+}
+body p, body li {
+  font-size: 18px;
+  text-align: justify;
+}
+body figcaption {
+  font-size: 18px;
+}
+body #main button a {
+  color: #fff;
+}
+body #main button a:hover {
+  text-decoration: none;
+}
+
+.main-area {
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  min-height: 100vh;
+}
+main {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#main {
+  margin: 60px auto;
+}
+
+a, button {
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+}
+
+button {
+  color: #fff;
+}
+
+a:hover, button:hover, input[type=submit]:hover, input[type=button]:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 970px) {
+  .main-area {
+    width: 100%;
+  }
+
+  main {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 580px) {
+  main {
+    width: 90%;
+  }
+}
+.error h1 {
+  font-size: 50px;
+}
+.error p a {
+  color: #fff;
+  text-decoration: none;
+}
+.error p a:hover {
+  text-decoration: underline;
+}
+
+.sentError {
+  display: none;
+}
+
+#SentSuccessful,
+#SentError {
+  display: block;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

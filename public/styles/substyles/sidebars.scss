@@ -1,0 +1,236 @@
+@import "../variables";
+
+//region sidebars
+  .bestemming-single, .bestemming-single-sidebar {
+    .bestemming-img-caption h2, h2 {
+      color: $darkblue;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-left:0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    figcaption {
+      font-size: 0.85em;
+      margin-bottom: 3px;
+      margin-top: 3px;
+    }
+  }
+    .left-sidebar, .right-sidebar {
+      width:18%;
+      display: inline-block;
+      padding-right:20px;
+      padding-left:20px;
+      text-align: center;
+      margin-top:60px;
+
+      .destinations-sidebar {
+
+        .bestemming-single-sidebar {
+          margin-bottom: 20px;
+          height:225px;
+
+          .destination-sidebar-date {
+            font-size:0.9em;
+          }
+        }
+      }
+
+      .destination-sidebar-img {
+        height: 180px;
+        width: 180px;
+        overflow: hidden;
+        object-fit: cover;
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .left-sidebar {
+      float: left;
+    }
+
+    .right-sidebar {
+      float:right;
+    }
+
+    //region sidebar-tooltips
+    .left-sidebar, .right-sidebar, .bottom-sidebar-mobile {
+
+      .tooltip .tooltip-text {
+        visibility: hidden;
+        width: 400px;
+        background-color: $darkGray;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        padding: 10px 15px;
+        font-size: 0.9em;
+        margin-top: -184px;
+      }
+
+      .tooltip:hover .tooltip-text {
+        visibility: visible;
+      }
+    }
+
+    .left-sidebar .tooltip-text {
+      left: 17%;
+    }
+
+    .right-sidebar .tooltip-text {
+      right:17%;
+    }
+
+    //sidebar tooltip disabled on touch-devices:
+    @media (hover:none) {
+      .left-sidebar, .right-sidebar, .bottom-sidebar-mobile {
+        .tooltip .tooltip-text {
+          visibility: hidden !important;
+        }
+      }
+    }
+
+    main {
+      .tooltip .tooltip-text {
+        display:none;
+      }
+    }
+    //endregion sidebar-tooltips
+    //endregion
+
+//region sidebars - inschrijven (fade)
+.inschrijven-left-sidebar, .inschrijven-right-sidebar, .inschrijven-bottom-sidebar {
+  .destinations-sidebar:after {
+    content: "";
+    background: rgba(255, 255, 255, 0.75);
+    position: absolute;
+    top: Calc(74px + 153px);
+    bottom: 85px;
+    z-index: 1;
+    width:Calc(18% + 30px);
+  }
+}
+.inschrijven-left-sidebar .destinations-sidebar:after,
+.inschrijven-bottom-sidebar .destinations-sidebar:after {
+  left:0;
+}
+
+.inschrijven-right-sidebar .destinations-sidebar:after {
+  right:0;
+}
+//endregion
+
+//region sidebars - smaller screens
+
+@media only screen and (max-width:1350px) {
+  .left-sidebar, .right-sidebar {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width:1010px) {
+  .right-sidebar, .left-sidebar {
+    display: none;
+  }
+  main#main {
+    width:73%;
+  }
+}
+
+@media only screen and (min-width:750px) and (max-width:1010px) {
+  .bottom-sidebar-mobile {
+    width: 23%;
+    float:left;
+    margin-top:60px;
+    text-align: center;
+    img {
+      height: 180px;
+      width: 180px;
+      overflow: hidden;
+      object-fit: cover;
+      display: block;
+      margin: auto;
+    }
+    span {
+      text-align: center;
+      margin:auto;
+      display: block;
+    }
+    &.inschrijven-bottom-sidebar .destinations-sidebar:after {
+      width:23%;
+    }
+  }
+}
+
+@media only screen and (min-width:1010px) {
+  .bottom-sidebar-mobile {
+    display:none;
+  }
+}
+
+@media only screen and (max-width:840px) and (min-width:750px) {
+  .bottom-sidebar-mobile img {
+    height:150px;
+    width:150px;
+  }
+}
+
+@media only screen and (max-width:750px) {
+  main#main {
+    width:90%;
+    display:block;
+  }
+  .left-sidebar {
+    display: none;
+  }
+  .bottom-sidebar-mobile {
+    display: block;
+
+    .bestemming-single-sidebar {
+      display: inline-block;
+      width: 30%;
+      margin: auto 1.666666%;
+
+      .destination-sidebar-img {
+        width: 100%;
+        object-fit: cover;
+        height: 149px;
+      }
+    }
+
+    &.inschrijven-bottom-sidebar .destinations-sidebar:after {
+      content:none;
+    }
+  }
+}
+
+@media only screen and (max-width:550px) {
+  .bottom-sidebar-mobile {
+    .bestemming-single-sidebar {
+      width:45%;
+      margin:0 2.5% 15px 2.5%;
+    }
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .bottom-sidebar-mobile {
+    .bestemming-single-sidebar {
+      width:70%;
+      margin-left:auto;
+      margin-right:auto;
+      display:block;
+    }
+  }
+}
+
+@media only screen and (max-width:350px) {
+  .bottom-sidebar-mobile .bestemming-single-sidebar {
+    width:90%;
+  }
+}
+
+//endregion

@@ -1,0 +1,52 @@
+@import "../variables";
+
+//region trips
+
+  //region popup-form
+    .trips .popup-form {
+      // main 4 form-blocks (not the extra info)
+      .formblock-wide {
+        width: 48%;
+        margin-bottom: 10px;
+        display: inline-block;
+
+        &:nth-child(1) {
+          float: right;
+        }
+
+        &.block-destination,
+        &.block-price {
+          margin-left: 2%;
+        }
+
+        label {
+          min-width: 40%;
+          display: inline-block;
+        }
+
+        input[type=text], input[type=date], input[type=number] {
+          min-width: 50%;
+          float: right;
+        }
+
+        input[type=date] {
+          padding-left: 4px;
+        }
+      }
+
+      // Extra info
+      .formblock-textarea {
+        width: 98.5%;
+        label {
+          vertical-align: top;
+          min-width: 22.5%;
+          display: inline-block;
+        }
+        textarea {
+          width: 75.7%;
+        }
+      }
+  }
+  //endregion
+
+//endregion

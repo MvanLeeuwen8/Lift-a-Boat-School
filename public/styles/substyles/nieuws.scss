@@ -1,0 +1,103 @@
+@import "../variables";
+
+//region nieuws
+  //region news - popup form
+    .news-form-section {
+      margin-top:0.8em;
+      margin-bottom:0.8em;
+
+      label {
+        width:30%;
+        display: inline-block;
+      }
+
+      input {
+        width:60%;
+      }
+      input[type=submit], input[type=button] {
+        width:100px;
+      }
+    }
+  //endregion news-popup form
+
+  //region displayed news
+    .news-all {
+      display:inline-block;
+      width:100%;
+
+      .news-single {
+
+        h2 {
+          width: 48%;
+          display: inline-block;
+          font-size: 20px;
+          text-align: justify;
+          margin-block-end: 1em;
+          margin-block-start: 1em;
+          font-weight: bold;
+          color: #1e6eb9;
+        }
+
+        .news-text {
+          p {
+            max-width: 100%;
+            word-break: break-word;
+          }
+          img {
+            max-width: 100%;
+            height: auto;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+        }
+
+        .edit-delete-buttons {
+          float: right;
+          width: 50%;
+          text-align: right;
+          margin-top: 1.5em;
+          a:first-child {
+            margin-right:1em;
+          }
+        }
+
+        // Add a border-top to all news articles except for the first one
+        &:not(:first-child) {
+          border-top: 2px solid $darkblue;
+          margin-top: 48px;
+          padding-top: 18px;
+        }
+
+        .main-image-news img {
+          width:100%;
+        }
+
+        .news-image-gallery .single-image {
+          width: 32%;
+          display:inline-block;
+          margin-left:Calc((100% - 96%)/4);
+          margin-right:Calc((100% - 96%)/4);
+
+          img {
+            width:100%;
+            cursor: pointer;
+          }
+
+          &:nth-child(3n+1) {
+            margin-left:0;
+          }
+
+          &:nth-child(3n) {
+            margin-right:0;
+          }
+        }
+
+        &:first-child {
+          h2 {
+            margin-block-start: 0;
+          }
+        }
+      }
+    }
+  //endregion displayed news
+//endregion

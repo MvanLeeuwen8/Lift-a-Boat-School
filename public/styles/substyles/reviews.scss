@@ -1,0 +1,203 @@
+@import "../variables";
+
+//region reviews
+
+  //region review popup-form
+    .reviews .popup-form #popupForm .reviewForm-section {
+    margin-bottom:10px;
+    div input {
+      width: 50%;
+      float: right;
+      margin-right: 2%;
+    }
+    .commentaarlabel {
+      display:block;
+      margin-bottom:10px;
+    }
+    textarea {
+      min-width: 70%;
+    }
+    .review-naam, .review-rating {
+      width:50%;
+      display:inline-block;
+      &:last-child {
+        float:right;
+      }
+    }
+    .review-rating label {
+      margin-left:2%;
+    }
+    .review-rating select {
+      width:100px;
+      font-size: 1.05em;
+    }
+  }
+  //endregion
+
+  //region shown reviews
+    .review-table {
+      width:100%;
+      tr {
+        font-style: italic;
+        width: 100%;
+        display:inline-block;
+        margin:10px auto;
+        padding:8px;
+        border: 3px solid $lightblue;
+        border-radius: $borderRadiusButton;
+        td {
+          text-align: justify;
+          a {
+            margin-right: 10px;
+          }
+          button {
+            margin-top:10px;
+          }
+        }
+      }
+      .review-comment {
+        font-style: normal;
+      }
+      a {
+        text-align: center;
+      }
+    }
+  //endregion
+
+  //region firefox fix for overlapping reviews and names
+    @-moz-document url-prefix() {
+      .reviews .old-reviews .review-table .review-single .review-comment {
+        margin-bottom:0 !important;
+      }
+    }
+  //endregion
+
+//endregion
+
+//region reviews - mobile
+
+  // Larger width shown-reviews
+  @media only screen and (max-width:1380px) {
+    .review-table .review-single {
+      width:80%;
+    }
+  }
+
+  // Even larger width shown-reviews
+  @media only screen and (max-width:1150px) {
+    .review-table .review-single {
+      width:90%;
+    }
+  }
+
+  @media only screen and (max-width:1010px) {
+    main.reviews {
+      width:70%;
+    }
+  }
+
+  // Max width shown-reviews and larger width textarea popup-form
+  @media only screen and (max-width:850px) {
+    .review-table .review-single {
+      width:95%;
+    }
+    //popup form
+    .reviews .popup-form #popupForm .reviewForm-section textarea {
+      min-width:80%;
+    }
+  }
+
+  @media only screen and (max-width:750px) {
+    main.reviews {
+      width: 80%;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  // Larger width reviews main-body and max-width textarea popup-form
+  @media only screen and (max-width:580px) {
+    main.reviews {
+      width:90%;
+
+      //popup form
+      .popup-form {
+        margin-left:20px;
+        #popupForm .reviewForm-section textarea {
+          width:100%;
+        }
+      }
+    }
+  }
+
+  // Larger width popup-form and some styling changes
+  @media only screen and (max-width:500px) {
+    //popup form display changes
+    .reviews .popup-form #popupForm .reviewForm-section {
+      .review-naam, .review-rating {
+        width:100%;
+        display:block;
+        margin-bottom: 5px;
+        label {
+          margin-left:0;
+        }
+        input {
+          margin-right:0;
+        }
+        select {
+          float:right;
+        }
+      }
+    }
+  }
+
+//endregion
+
+//region reviews - aanpassen-screen
+
+  //region desktop
+    .edit-review-form {
+    //background-color:rgba(0,0,0,0.5);
+    width:70%;
+    margin: 30px auto auto auto;
+    padding:20px;
+    .edit-review-name input,
+    .edit-review-comment textarea {
+      min-width:60%;
+    }
+    .edit-review-rating select {
+      width:50px;
+    }
+    .edit-review-comment {
+      label {
+        vertical-align: top;
+      }
+      textarea {
+        resize:vertical;
+      }
+    }
+    .edit-review-buttons input[type=submit] {
+      margin-right:10px;
+    }
+  }
+  //endregion
+
+  //region mobile
+  @media only screen and (max-width:700px) {
+    .edit-review-form {
+      div {
+        label {
+          display:block !important;
+        }
+        input, textarea, select {
+          margin-left:20px;
+        }
+        input[type=text], textarea {
+          width: 100%;
+        }
+      }
+    }
+  }
+  //endregion
+
+//endregion
